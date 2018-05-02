@@ -1,27 +1,34 @@
+<!-- YOU MUST HAVE A SERVER CONNECTION TO RUN PHP SCRIPTS -->
+
+<!-- This is the index.php file.
+     This file wraps all of the needed code
+     and pushes it to the browser
+     -->
+
+<!-- Using HTML 5 -->
 <!DOCTYPE html>
-<!-- <?php include('dataBaseAccess.php')?> -->
+
+<!-- Call the connect.php script
+     This will get information from a database
+     to place markers on the map
+     -->
 <?php include('connect.php')?>
 
 <html>
 
-<style>
-  #map{
-    height:400px;
-    width:100%;
-  }
-</style>
-
 <head>
-  <title>Example Data</title>
+  <title> Map </title>
+  <!-- Note that we do not include PHP files -->
   <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="styles.css">
   <script language="javascript" type="text/javascript" src="map.js"></script>
-  <script language="javascript" type="text/javascript" src="submitINFO.js"></script>
-  <script language="javascript" type="text/javascript" src="receiveINFO.js"></script>
-  <script language="javascript" type="text/javascript" src="deleteINFO.js"></script>
+  <script language="javascript" type="text/javascript" src="databaseAccess.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlx94CvcdTa_9PQ2Qgeig2aHPpL2lMsU0&callback=initMap"></script>
 </head>
 
+<!-- Where the map lives -->
 <body>
-  <div style="height: 500px; width: 500px;" id="map"></div>
+  <div id="map"></div>
 </body>
+
 </html>
