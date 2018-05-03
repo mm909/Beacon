@@ -33,7 +33,9 @@
 
   <div id="summaryInformation">
     <script language="javascript" type="text/javascript" src="resizeMap.js"></script>
+
   </div>
+
 
 </body>
 
