@@ -29,9 +29,7 @@
 <!-- Where the map lives -->
 <body>
   <!-- Div is a container for other html elements -->
-  <div id="mapContainer">
   <div id="map"></div>
-  </div>
 
   <div id="summaryInformation">
     <script language="javascript" type="text/javascript" src="resizeMap.js"></script>
