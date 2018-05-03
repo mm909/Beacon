@@ -25,7 +25,7 @@ var element = document.getElementById("summaryInformation");
 {
 var slider = document.createElement("input");
     slider.setAttribute("min", "1");
-    slider.setAttribute("max", "100");
+    slider.setAttribute("max", "70");
     slider.setAttribute("value", "50");
     slider.setAttribute("class", "slider");
     slider.setAttribute("type", "range");
@@ -33,7 +33,7 @@ var slider = document.createElement("input");
 
     slider.setAttribute("oninput", "changedValue(this)");
 
-var element = document.getElementById("summaryInformation");
+var element = document.getElementById("wrap");
     element.appendChild(slider);
 }
 // -------------------
@@ -41,7 +41,6 @@ var element = document.getElementById("summaryInformation");
 function changedValue(x){
       var mapDIV = document.getElementById("map");
       console.log(x.value)
-      mapDIV.style.width = 2 * x.value + "vh";
-      console.log(mapDIV.style.width)
+      mapDIV.style.height = 100 - x.value + "vh";
 
 }

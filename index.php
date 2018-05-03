@@ -29,12 +29,13 @@
 <!-- Where the map lives -->
 <body>
   <!-- Div is a container for other html elements -->
-  <div id="map"></div>
-
-  <div id="summaryInformation">
+  <div id="wrap" class="wrapper">
     <script language="javascript" type="text/javascript" src="resizeMap.js"></script>
+    <div id="map"></div>
 
-  </div>
+  <div>
+
+
 
 
 </body>
