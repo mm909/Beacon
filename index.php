@@ -20,6 +20,9 @@
   <title> Map </title>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <script language="javascript" type="text/javascript" src="map.js"></script>
+  <script language="javascript" type="text/javascript" src="databaseAccess.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlx94CvcdTa_9PQ2Qgeig2aHPpL2lMsU0&callback=initMap"></script>
 </head>
 
 <body>
@@ -27,13 +30,20 @@
   <div id="Main-Section" class="Container-Map-SI">
 
     <div id="Map-Section" class="Container-Map">
-
+      <div id="map" class="Map"></div>
     </div>
+    
     <div id="SI-Section" class="Container-SI">
 
     </div>
 
   </div>
+
+
+
+
+
+
 
 
 

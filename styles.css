@@ -5,7 +5,7 @@
 .Container-Map-SI {
   width: 375px;
   height: 667px;
-  background-color: green;
+  background-color: black;
   position: absolute;
   top: 0;
   left: 0;
@@ -15,7 +15,7 @@
 .Container-Map {
   width: 375px;
   height: 334px;
-  background-color: yellow;
+  background-color: black;
   position: absolute;
   top: 0;
 }
@@ -23,16 +23,15 @@
 .Container-SI {
   width: 375px;
   height: 333px;
-  background-color: red;
+  background-color: black;
   position: absolute;
   bottom: 0;
 }
 
 
-
-  #map {
-    width: 1000px;
-    height: 50vh;
+  .Map {
+    width: 375px;
+    height: 334px;
   }
 
 
