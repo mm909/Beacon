@@ -37,22 +37,36 @@
 
   <div id="Container-SI">
     <div id="Scrollable-Box">
-      <div class="content">
+      <div id="contentSection" class="content">
         <div class="gameStore-SI">
-        <img src="testImage.jpg" alt="Hope this works" class="storeImage">
-        <h2>Vendredi 17 octobre</h2>
-        <h2>Vendredi 17 octobre</h2>
-        <h2>Vendredi 17 octobre</h2>
+          <img src="testImage.jpg" class="storeImage">
+          <h2>Example game store</h2>
+          <h3>Players: 10</h3>
+          <h4>40K is here</h4>
         </div>
         <div class="gameStore-SI">
-          <h2>Vendredi 18 octobre</h2>
-          <h2>Vendredi 18 octobre</h2>
-          <h2>Vendredi 18 octobre</h2>
+          <img src="testImage.jpg" class="storeImage">
+          <h2>Example game store</h2>
+          <h3>Players: 10</h3>
+          <h4>Magic is here</h4>
         </div>
         <div class="gameStore-SI">
-          <h2>Vendredi 19 octobre</h2>
-          <h2>Vendredi 19 octobre</h2>
-          <h2>Vendredi 19 octobre</h2>
+          <img src="testImage.jpg" class="storeImage">
+          <h2 class="SI-TEXT">Example game store</h2>
+          <h3>Players: 10</h3>
+          <h4>Other is here</h4>
+        </div>
+        <div class="gameStore-SI">
+          <img src="testImage.jpg" class="storeImage">
+          <h2 class="SI-TEXT">Example game store</h2>
+          <h3>Players: 10</h3>
+          <h4>Other is here</h4>
+        </div>
+        <div class="gameStore-SI">
+          <img src="testImage.jpg" class="storeImage">
+          <h2 class="SI-TEXT">Example game store</h2>
+          <h3>Players: 10</h3>
+          <h4>Other is here</h4>
         </div>
       </div>
     </div>
