@@ -16,35 +16,45 @@
 
 <html>
 
+<!-- Meta information, styles, js, and API links -->
 <head>
   <title> Map </title>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="styles.css">
   <script language="javascript" type="text/javascript" src="map.js"></script>
   <script language="javascript" type="text/javascript" src="databaseAccess.js"></script>
-  <script language="javascript" type="text/javascript" src="SI.js"></script>
-
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlx94CvcdTa_9PQ2Qgeig2aHPpL2lMsU0&callback=initMap"></script>
 </head>
 
+<!-- Div is a container for other html elements -->
+
 <body>
-  <!-- Div is a container for other html elements -->
+
+<!-- This div contains two elements - a map and a summary information section -->
 <div id="Container-Map-SI">
 
+  <!-- This section holds the map -->
   <div id="Container-Map">
+    <!-- This is the div element that the initMap function references -->
     <div id="map" class="Map"></div>
   </div>
 
+  <!-- This section holds all of the text at the bottom on the screen (not the map) -->
   <div id="Container-SI">
-    <div id="Scrollable-Box">
+    <!-- This container holds a big list of other divs and makes them able to scroll -->
+    <div id="Scrollable-Box" class="content">
+      <!-- Content section of the scrollable box - basically a place holder -->
       <div id="contentSection" class="content">
 
+        <!-- This is the container for each indivisual 'game store' displayed in the contnet section -->
         <div class="gameStore-SI">
 
+          <!-- Image container -->
           <div class="storeImageContainer">
             <img src="images/storeLogos/Darkside.jpg" class=storeImage>
           </div>
 
+          <!-- Text container -->
           <div class="TextContainer">
             <div class="storeNameContainer">
               <h3> Darkside Games </h3>
@@ -144,11 +154,13 @@
               </div>
             </div>
           </div>
-
+          
         </div>
       </div>
     </div>
   </div>
 </div>
+
 </body>
+
 </html>
