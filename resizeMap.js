@@ -40,7 +40,6 @@ var element = document.getElementById("wrap");
 
 function changedValue(x){
       var mapDIV = document.getElementById("map");
-      console.log(x.value)
       mapDIV.style.height = 100 - x.value + "vh";
 
 }

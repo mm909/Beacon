@@ -18,22 +18,22 @@
 
 <head>
   <title> Map </title>
-  <!-- Note that we do not include PHP files -->
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="styles.css">
-  <script language="javascript" type="text/javascript" src="map.js"></script>
-  <script language="javascript" type="text/javascript" src="databaseAccess.js"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlx94CvcdTa_9PQ2Qgeig2aHPpL2lMsU0&callback=initMap"></script>
 </head>
 
-<!-- Where the map lives -->
 <body>
   <!-- Div is a container for other html elements -->
-  <div id="wrap" class="wrapper">
-    <script language="javascript" type="text/javascript" src="resizeMap.js"></script>
-    <div id="map"></div>
+  <div id="Main-Section" class="Container-Map-SI">
 
-  <div>
+    <div id="Map-Section" class="Container-Map">
+
+    </div>
+    <div id="SI-Section" class="Container-SI">
+
+    </div>
+
+  </div>
 
 
 

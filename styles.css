@@ -1,6 +1,35 @@
 /* This is styles for the map */
 /* 100vh = 100% */
 
+/* These are the scaled down res of an iphone 8 - 1334 x 750 */
+.Container-Map-SI {
+  width: 375px;
+  height: 667px;
+  background-color: green;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* Background color is for testing the size of each div*/
+}
+
+.Container-Map {
+  width: 375px;
+  height: 334px;
+  background-color: yellow;
+  position: absolute;
+  top: 0;
+}
+
+.Container-SI {
+  width: 375px;
+  height: 333px;
+  background-color: red;
+  position: absolute;
+  bottom: 0;
+}
+
+
+
   #map {
     width: 1000px;
     height: 50vh;
@@ -40,8 +69,4 @@
     height: 25px; /* Slider handle height */
     background: #4CAF50; /* Green background */
     cursor: pointer; /* Cursor on hover */
-  }
-
-  .wrapper {
-    width: 780px;
   }
