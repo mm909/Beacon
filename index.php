@@ -38,41 +38,117 @@
   <div id="Container-SI">
     <div id="Scrollable-Box">
       <div id="contentSection" class="content">
+
         <div class="gameStore-SI">
-          <img src="testImage.jpg" class="storeImage">
-          <h2>Example game store</h2>
-          <h3>Players: 10</h3>
-          <h4>40K is here</h4>
+
+          <div class="storeImageContainer">
+            <img src="images/storeLogos/Darkside.jpg" class=storeImage>
+          </div>
+
+          <div class="TextContainer">
+            <div class="storeNameContainer">
+              <h3> Darkside Games </h3>
+            </div>
+            <div class="storeAddressContainer">
+              <p> 9620 South Las Vegas Boulevard</p>
+            </div>
+            <div class="PlayerInfrormation1">
+              <div class="players">
+                <p> Total Players: 5</p>
+              </div>
+            </div>
+            <div class="PlayerInfrormation2">
+              <div class="popular">
+                <p> Popular: Magic</p>
+              </div>
+            </div>
+          </div>
+
         </div>
+
         <div class="gameStore-SI">
-          <img src="testImage.jpg" class="storeImage">
-          <h2>Example game store</h2>
-          <h3>Players: 10</h3>
-          <h4>Magic is here</h4>
+
+          <div class="storeImageContainer">
+            <img src="images/storeLogos/Darkside.jpg" class=storeImage>
+          </div>
+
+          <div class="TextContainer">
+            <div class="storeNameContainer">
+              <h3> Darkside Games </h3>
+            </div>
+            <div class="storeAddressContainer">
+              <p> 9620 South Las Vegas Boulevard</p>
+            </div>
+            <div class="PlayerInfrormation1">
+              <div class="players">
+                <p> Total Players: 5</p>
+              </div>
+            </div>
+            <div class="PlayerInfrormation2">
+              <div class="popular">
+                <p> Popular: Magic</p>
+              </div>
+            </div>
+          </div>
+
         </div>
+
         <div class="gameStore-SI">
-          <img src="testImage.jpg" class="storeImage">
-          <h2 class="SI-TEXT">Example game store</h2>
-          <h3>Players: 10</h3>
-          <h4>Other is here</h4>
+
+          <div class="storeImageContainer">
+            <img src="images/storeLogos/Darkside.jpg" class=storeImage>
+          </div>
+
+          <div class="TextContainer">
+            <div class="storeNameContainer">
+              <h3> Darkside Games </h3>
+            </div>
+            <div class="storeAddressContainer">
+              <p> 9620 South Las Vegas Boulevard</p>
+            </div>
+            <div class="PlayerInfrormation1">
+              <div class="players">
+                <p> Total Players: 5</p>
+              </div>
+            </div>
+            <div class="PlayerInfrormation2">
+              <div class="popular">
+                <p> Popular: Magic</p>
+              </div>
+            </div>
+          </div>
+
         </div>
+
         <div class="gameStore-SI">
-          <img src="testImage.jpg" class="storeImage">
-          <h2 class="SI-TEXT">Example game store</h2>
-          <h3>Players: 10</h3>
-          <h4>Other is here</h4>
-        </div>
-        <div class="gameStore-SI">
-          <img src="testImage.jpg" class="storeImage">
-          <h2 class="SI-TEXT">Example game store</h2>
-          <h3>Players: 10</h3>
-          <h4>Other is here</h4>
+
+          <div class="storeImageContainer">
+            <img src="images/storeLogos/Darkside.jpg" class=storeImage>
+          </div>
+
+          <div class="TextContainer">
+            <div class="storeNameContainer">
+              <h3> Darkside Games </h3>
+            </div>
+            <div class="storeAddressContainer">
+              <p> 9620 South Las Vegas Boulevard</p>
+            </div>
+            <div class="PlayerInfrormation1">
+              <div class="players">
+                <p> Total Players: 5</p>
+              </div>
+            </div>
+            <div class="PlayerInfrormation2">
+              <div class="popular">
+                <p> Popular: Magic</p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
   </div>
 </div>
-
 </body>
-
 </html>
