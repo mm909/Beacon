@@ -22,6 +22,8 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
   <script language="javascript" type="text/javascript" src="map.js"></script>
   <script language="javascript" type="text/javascript" src="databaseAccess.js"></script>
+  <script language="javascript" type="text/javascript" src="SI.js"></script>
+
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlx94CvcdTa_9PQ2Qgeig2aHPpL2lMsU0&callback=initMap"></script>
 </head>
 
@@ -32,9 +34,25 @@
     <div id="Map-Section" class="Container-Map">
       <div id="map" class="Map"></div>
     </div>
-    
-    <div id="SI-Section" class="Container-SI">
 
+    <div id="SI-Section" class="Container-SI">
+      <div class="SI">
+        <select id="SI-Box" name="year" size="10">
+          <option value="1" SELECTED>1</option>
+          <option value="2" >2</option>
+          <option value="3" >3</option>
+          <option value="4" >4</option>
+          <option value="5" >5</option>
+          <option value="6" >6</option>
+          <option value="7" >7</option>
+          <option value="8" >8</option>
+          <option value="9" >9</option>
+          <option value="10" >10</option>
+          <option value="11" >11</option>
+          <option value="12" >12</option>
+          <option value="13" >13</option>
+         </select>
+      </div>
     </div>
 
   </div>

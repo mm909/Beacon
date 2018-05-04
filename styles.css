@@ -23,11 +23,24 @@
 .Container-SI {
   width: 375px;
   height: 333px;
-  background-color: black;
+  background-color: gray;
   position: absolute;
   bottom: 0;
 }
 
+.SI {
+   display: inline-block;
+   max-height: 200px;
+
+   vertical-align: top;
+   overflow: hidden;
+   border: solid grey;
+ }
+
+.SI select {
+  padding:10px;
+  margin:-5px -20px -5px -5px;
+}
 
   .Map {
     width: 375px;
