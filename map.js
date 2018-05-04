@@ -14,7 +14,7 @@ function initMap(){
   }
 
   // Make a new map with those options and place it in <div id="map"></div>
-  var map = new google.maps.Map(document.getElementById('map'), options);
+  map = new google.maps.Map(document.getElementById('map'), options);
 
   // Add listner - For when someone clicks on the map
   google.maps.event.addListener(map, 'click', function(event){
