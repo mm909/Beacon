@@ -36,8 +36,6 @@
     </div>
 
     <div id="SI-Section" class="Container-SI">
-      <div class="SI">
-        <select id="SI-Box" name="year" size="10">
           <option value="1" SELECTED>1</option>
           <option value="2" >2</option>
           <option value="3" >3</option>
