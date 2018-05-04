@@ -1,6 +1,109 @@
 /* This is styles for the map */
 /* 100vh = 100% */
 
+.scroll{
+  position: fixed;
+  background-color: red;
+  top: 0;
+  color: #fff;
+  padding: 10px;
+}
+#events {
+    width: 100%;
+    height: 100%;
+}
+
+#event-list {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+}
+
+#event-details {
+    float: left;
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    overflow: hidden;
+}
+
+#events .content {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding-right: 30px;
+}
+
+#events h2 {
+  margin: 0;
+  padding: 30px 0 10px 50px;
+  font-size: 1em;
+}
+
+#events ul {
+  text-align: center;
+  margin: 0 0 10px 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: 2em;
+}
+
+#events ul li {
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#events p {
+  margin: 0 0 20px 0;
+  padding: 0;
+  font-size: 1em;
+  text-align: center;
+}
+
+#events p.event-info {
+  padding: 0 50px 0 50px;
+  text-align: left;
+}
+
+#events p.event-description {
+  margin: 0 ;
+  padding: 0 50px 0 50px;
+  font-size: 1em;
+  text-align: left;
+}
+
+#events ul.artists-links {
+  margin-top: 30px;
+  padding: 0 50px 0 50px;
+  text-align: left;
+  font-size: 1em;
+}
+
+#events ul.artists-links li {
+  margin-bottom: 0;
+  text-transform: none;
+}
+
+#events section {
+  margin: 59px 0 80px 0;
+}
+
+iframe {
+  display: block;
+  margin: 60px auto;
+  width: 70%;
+}
+
 /* These are the scaled down res of an iphone 8 - 1334 x 750 */
 .Container-Map-SI {
   width: 375px;
@@ -28,16 +131,6 @@
   bottom: 0;
 
 }
-
-.Container-SI select {
-  padding:5px;
-  width: 100%;
-  height: 100%;
-  border:solid grey 1px;
-  /* UP left down right*/
-  margin: -0px -0px -0px -0px;
-}
-
 
   .Map {
     width: 375px;
