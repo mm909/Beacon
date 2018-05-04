@@ -38,17 +38,18 @@
   <div id="Container-SI">
     <div id="Scrollable-Box">
       <div class="content">
-        <div>
+        <div class="gameStore-SI">
+        <img src="testImage.jpg" alt="Hope this works" class="storeImage">
         <h2>Vendredi 17 octobre</h2>
         <h2>Vendredi 17 octobre</h2>
         <h2>Vendredi 17 octobre</h2>
         </div>
-        <div>
+        <div class="gameStore-SI">
           <h2>Vendredi 18 octobre</h2>
           <h2>Vendredi 18 octobre</h2>
           <h2>Vendredi 18 octobre</h2>
         </div>
-        <div>
+        <div class="gameStore-SI">
           <h2>Vendredi 19 octobre</h2>
           <h2>Vendredi 19 octobre</h2>
           <h2>Vendredi 19 octobre</h2>
