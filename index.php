@@ -29,40 +29,34 @@
 
 <body>
   <!-- Div is a container for other html elements -->
-  <div id="Main-Section" class="Container-Map-SI">
+<div id="Container-Map-SI">
 
-    <div id="Map-Section" class="Container-Map">
-      <div id="map" class="Map"></div>
-    </div>
-
-    <div id="SI-Section" class="Container-SI">
-      <div id="events">
-        <div id="event-list">
-            <div class="content">
-              <h2>Vendredi 17 octobre</h2>
-              <h2>Vendredi 17 octobre</h2>
-              <h2>Vendredi 17 octobre</h2>
-              <h2>Vendredi 17 octobre</h2>
-              <h2>Vendredi 17 octobre</h2>
-              <h2>Vendredi 17 octobre</h2>
-              <h2>Vendredi 17 octobre</h2>
-              <h2>Vendredi 17 octobre</h2>
-
-            </div>
-        </div>
-    </div>
+  <div id="Container-Map">
+    <div id="map" class="Map"></div>
   </div>
 
-
-
-
-
-
-
-
-
-
-
+  <div id="Container-SI">
+    <div id="Scrollable-Box">
+      <div class="content">
+        <div>
+        <h2>Vendredi 17 octobre</h2>
+        <h2>Vendredi 17 octobre</h2>
+        <h2>Vendredi 17 octobre</h2>
+        </div>
+        <div>
+          <h2>Vendredi 18 octobre</h2>
+          <h2>Vendredi 18 octobre</h2>
+          <h2>Vendredi 18 octobre</h2>
+        </div>
+        <div>
+          <h2>Vendredi 19 octobre</h2>
+          <h2>Vendredi 19 octobre</h2>
+          <h2>Vendredi 19 octobre</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 </body>
 
