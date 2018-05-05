@@ -1,3 +1,13 @@
+/*
+
+#0b0c10  // Black
+#1f2833  // Light black
+#c5c6c7  // Gray
+#66fcf1  // Cool blue
+#45a29e  // Aqua
+
+*/
+
 // Slider creation
 {
 var slider = document.createElement("input");

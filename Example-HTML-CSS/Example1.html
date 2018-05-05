@@ -1,0 +1,43 @@
+
+<!-- Using HTML 5 -->
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title> Map </title>
+    <meta charset="utf-8">
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+    <link rel="stylesheet" type="text/css" href="ExampleCSS.css">
+    <script language="javascript" type="text/javascript" src="map.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlx94CvcdTa_9PQ2Qgeig2aHPpL2lMsU0&callback=initMap"></script>
+  </head>
+
+  <header class="header">
+    <div class="container">
+      <a href="Example1.html">Beacon!</a>
+      <div class="settingsContainer">
+        <img src="Menu.png" id="threeLines">
+      </div>
+    </div>
+  </header>
+
+  <div class="nav">
+    <div class="container">
+      <ul>
+        <li><a href="#">Map</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <body>
+
+    <div class="container-map">
+      <div id="map" class="Map"></div>
+    </div>
+
+  </body>
+
+</html>

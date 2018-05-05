@@ -20,15 +20,19 @@
 <head>
   <title> Map </title>
   <meta charset="utf-8">
+  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
   <link rel="stylesheet" type="text/css" href="styles.css">
   <script language="javascript" type="text/javascript" src="map.js"></script>
   <script language="javascript" type="text/javascript" src="databaseAccess.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlx94CvcdTa_9PQ2Qgeig2aHPpL2lMsU0&callback=initMap"></script>
 </head>
 
+
 <!-- Div is a container for other html elements -->
 
 <body>
+
+
 
 <!-- This div contains two elements - a map and a summary information section -->
 <div id="Container-Map-SI">
@@ -154,7 +158,7 @@
               </div>
             </div>
           </div>
-          
+
         </div>
       </div>
     </div>

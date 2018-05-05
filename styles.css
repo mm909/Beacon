@@ -1,15 +1,20 @@
 /* CSS for Beacon -> index.php */
 
+/*  */
+
+body {
+  margin: 0px;
+}
+
 /* These are the scaled down res of an iphone 8 - 1334 x 750                           */
 /* These width and height values "SHOULD" be the only hard set width and height values */
 /* But they aren't because Im a shitty programer                                       */
 #Container-Map-SI {
-  width: 375px;
-  height: 667px;
+  width: 80%;
+  height: 80%;
+  margin: auto;
   background-color: black;
-  position: absolute;
-  top: 0;
-  right: 0;
+  display: inline-flex;
 }
 
 /* Container for the map should:                       */
@@ -21,7 +26,6 @@
   height: 65%;
   background-color: gray;
   position: absolute;
-  top: 0;
 }
 
 /* Map should take up the whole map container */
