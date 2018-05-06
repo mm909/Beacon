@@ -1,0 +1,180 @@
+1249/1562
+
+https://icons8.com/icon/set/menu/color
+
+
+/*
+http://blog.visme.co/website-color-schemes/
+#0b0c10  // Black
+#1f2833  // Light black
+#c5c6c7  // Gray
+#66fcf1  // Cool blue
+#45a29e  // Aqua
+
+*/
+
+// Slider creation
+{
+var slider = document.createElement("input");
+    slider.setAttribute("min", "1");
+    slider.setAttribute("max", "70");
+    slider.setAttribute("value", "50");
+    slider.setAttribute("class", "slider");
+    slider.setAttribute("type", "range");
+    slider.setAttribute("id", "firstSlider");
+
+    slider.setAttribute("oninput", "changedValue(this)");
+
+var element = document.getElementById("wrap");
+    element.appendChild(slider);
+}
+// -------------------
+
+function changedValue(x){
+      var mapDIV = document.getElementById("map");
+      mapDIV.style.height = 100 - x.value + "vh";
+
+}
+
+// -------------------
+// Button creation
+{
+var button = document.createElement("button");
+    button.setAttribute("id", "firstButton");
+    button.innerHTML= "Change Map Size";
+
+    button.addEventListener("click", function(){
+      //console.log("this did indeed work");
+      var mapDIV = document.getElementById("map");
+      mapDIV.style.width = (map.startingWidth - 10) + "vh";
+      map.startingWidth -= 10;
+      //console.log(map.style.width);
+    });
+
+var element = document.getElementById("summaryInformation");
+    element.appendChild(button);
+}
+// -------------------
+
+
+THIS IS HOW TO SCROLL THROUGH DIVS
+https://stackoverflow.com/questions/29802120/jquery-scroll-to-element-in-different-divs
+
+https://www.w3.org/TR/2017/NOTE-wai-aria-practices-1.1-20171214/examples/listbox/listbox-scrollable.html
+
+https://bytes.com/topic/c-sharp/answers/870896-scrolling-scrollbar-hidden
+
+
+/*
+CREATE TABLE ExampleGameStore (
+    GSID int PRIMARY KEY NOT null AUTO_INCREMENT,
+    gameStoreName varchar(255),
+    latitude double,
+    longitude double,
+    playersAtStore int,
+    description text
+);
+*/
+
+/*
+// Items in database "ExampleGameStore"
+// API KEY FOR GOOGLE MAPS = AIzaSyBlx94CvcdTa_9PQ2Qgeig2aHPpL2lMsU0
+
+// Example gamesotre in mesquite
+INSERT INTO examplegamestore (gameStoreName, latitude, longitude, playersAtStore, description)
+VALUES ('FirstGameStore', 36.8055, -114.0672, 15, 'This is the first game store in the database');
+
+// Las vegas
+INSERT INTO examplegamestore (gameStoreName, latitude, longitude, playersAtStore, description)
+VALUES ('SecondGameStore', 36.8055, -114.0672, 10, 'This game store is in las vegas');
+
+// Little Shope of Magic
+INSERT INTO examplegamestore (gameStoreName, latitude, longitude, playersAtStore, description)
+VALUES ('Little Shop of Magic', 36.121934, -115.118990, 20, 'This is a game store in Las Vegas. They have stuff to buy and things to do.')
+*/
+
+
+// Check for customicon
+if(object.iconImage){
+  // Set icon image
+  marker.setIcon(object.iconImage);
+}
+
+// Check content
+if(props.content){
+
+  var infoWindow = new google.maps.InfoWindow({
+    content:props.content
+  });
+
+}
+
+
+https://www.aspsnippets.com/Articles/Google-Maps-V3-Remove-specific-single-selected-marker.aspx
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false"></script>
+<script type="text/javascript">
+    var markers = [];
+    var uniqueId = 1;
+    window.onload = function () {
+        var mapOptions = {
+            center: new google.maps.LatLng(21.0000, 78.0000),
+            zoom: 5,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
+
+        //Attach click event handler to the map.
+        google.maps.event.addListener(map, 'click', function (e) {
+
+            //Determine the location where the user has clicked.
+            var location = e.latLng;
+
+            //Create a marker and placed it on the map.
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+
+            //Set unique id
+            marker.id = uniqueId;
+            uniqueId++;
+
+            //Attach click event handler to the marker.
+            google.maps.event.addListener(marker, "click", function (e) {
+                var content = 'Latitude: ' + location.lat() + '<br />Longitude: ' + location.lng();
+                content += "<br /><input type = 'button' va;ue = 'Delete' onclick = 'DeleteMarker(" + marker.id + ");' value = 'Delete' />";
+                var infoWindow = new google.maps.InfoWindow({
+                    content: content
+                });
+                infoWindow.open(map, marker);
+            });
+
+            //Add marker to the array.
+            markers.push(marker);
+        });
+    };
+    function DeleteMarker(id) {
+        //Find and remove the marker from the Array
+        for (var i = 0; i < markers.length; i++) {
+            if (markers[i].id == id) {
+                //Remove the marker from Map
+                markers[i].setMap(null);
+
+                //Remove the marker from array.
+                markers.splice(i, 1);
+                return;
+            }
+        }
+    };
+</script>
+</head>
+<body>
+<div id="dvMap" style="width: 500px; height: 500px">
+</div>
+<br />
+<input type="button" value="Delete" onclick="DeleteMarkers()" />
+</body>
+</html>
