@@ -34,8 +34,6 @@ function initMap(){
       }
     }
 
-    console.log(tempMarker);
-
     // Add this marker to the map
     addMarker(tempMarker);
   }
