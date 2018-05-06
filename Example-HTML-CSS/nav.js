@@ -2,6 +2,7 @@ $( document ).ready(function() {
 
     var Hnav = false;
     var Vnav = false;
+    $("#container-tab-right").hide();
 
 
     $('#threeLines').hover(function(){
@@ -15,19 +16,26 @@ $( document ).ready(function() {
     $('#threeLines').on({
         'click': function(){
           if(Vnav || Hnav){
-            $(".Map").width('100%');
-            $(".Map").height('100%');
+            $(".container-map").width('100%');
+            $(".container-map").height('100%');
+            $("#container-tab-right").hide();
             Vnav = false;
             Hnav = false;
             $(this).attr('src','Menu-Select.png');
           } else if( $(".height").width()*1.2003841229193341 > 1500){
-              $(".Map").height('100%');
-              $(".Map").width('80%');
+              $(".container-map").height('100%');
+              $(".container-map").width('80%');
+              $("#container-tab-right").width('20%');
+              $("#container-tab-right").height('100%');
+              $("#container-tab-right").show();
               $(this).attr('src','Menu-Selected.png');
               Vnav = true;
           } else {
-              $(".Map").width('100%');
-              $(".Map").height('60%');
+              $(".container-map").width('100%');
+              $(".container-map").height('60%');
+              $("#container-tab-right").show();
+              $("#container-tab-right").width('100%');
+              $("#container-tab-right").height('40%');
               $(this).attr('src','Menu-Selected.png');
               Hnav = true;
           }

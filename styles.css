@@ -51,6 +51,7 @@ body {
 /* overflow hidden is the key to making a scrollable text area             */
 /* I think                                                                 */
 /* I could be wrong because I just copied the code and learned it that way */
+
 #Scrollable-Box {
   width: 100%;
   height: 100%;
@@ -58,6 +59,7 @@ body {
   color: white;
   overflow: hidden;
 }
+
 
 /* Refers to - wait for it - the content in the Scrollable-Box         */
 /* Again should fill the whole area of the parent                      */
@@ -71,7 +73,7 @@ body {
 }
 
 /* Gets rid of the margins for all of the content */
-#contentSection * {
+#Scrollable-Box * {
   margin: 0px;
 }
 
