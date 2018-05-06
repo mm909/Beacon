@@ -4,7 +4,7 @@
 include 'connect.php';
 
 // Form the SQL query
-$sql = "SELECT * FROM examplegamestore;";
+$sql = "SELECT * FROM gamestoreinfo;";
 
 // query and store the results
 $result = mysqli_query($conn, $sql);

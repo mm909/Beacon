@@ -1,5 +1,5 @@
 <?php
-
+/*
 // Connect to database
 include_once 'connect.php';
 
@@ -21,5 +21,5 @@ echo $sql;
 echo  "<br><br>" ;
 echo "DONE";
 echo  "<br><br>" ;
-
+*/
 ?>

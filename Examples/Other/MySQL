@@ -1,8 +1,4 @@
 
-INSERT INTO `gamestoreinfo`(`gameStoreName`, `latitude`, `longitude`, `description`, `street`, `state`, `city`, `zip`, `phone`, `email`, `logo`)
-VALUES ('Darkside Games',36.0150798,-115.1713357,'The games are dark here','9620 South Las Vegas Boulevard','Nevada','Las Vegas','89123','7028344113','darksidegameslv@gmail.com','../images/logos/darksideLogo')
-
-
 CREATE TABLE currentPlayerInfo (
     GSID int PRIMARY KEY NOT null AUTO_INCREMENT,
     gameStoreName varchar(255),
@@ -14,6 +10,17 @@ CREATE TABLE currentPlayerInfo (
     playersWarhammer int,
     playersOther int
 );
+
+INSERT INTO `currentplayerinfo`(`gameStoreName`, `playersTotal`, `playersMagic`, `playersPokemon`, `playersYugioh`, `playersDND`, `playersWarhammer`, `playersOther`)
+VALUES ('Darkside Games',0,0,0,0,0,0,0)
+
+INSERT INTO `currentplayerinfo`(`gameStoreName`, `playersTotal`, `playersMagic`, `playersPokemon`, `playersYugioh`, `playersDND`, `playersWarhammer`, `playersOther`)
+VALUES ('Little Shop of Magic',0,0,0,0,0,0,0)
+
+INSERT INTO `currentplayerinfo`(`gameStoreName`, `playersTotal`, `playersMagic`, `playersPokemon`, `playersYugioh`, `playersDND`, `playersWarhammer`, `playersOther`)
+VALUES ('TCG Junkie',0,0,0,0,0,0,0)
+
+/*  */
 
 CREATE TABLE gameStoreInfo (
     GSID int PRIMARY KEY NOT null AUTO_INCREMENT,
@@ -29,3 +36,12 @@ CREATE TABLE gameStoreInfo (
     email text,
     logo text
 );
+
+INSERT INTO `gamestoreinfo`(`gameStoreName`, `latitude`, `longitude`, `description`, `street`, `state`, `city`, `zip`, `phone`, `email`, `logo`)
+VALUES ('Darkside Games',36.0150798,-115.1713357,'The games are dark here','9620 South Las Vegas Boulevard','Nevada','Las Vegas','89123','7028344113','darksidegameslv@gmail.com','../images/logos/darksideLogo')
+
+INSERT INTO `gamestoreinfo`(`gameStoreName`, `latitude`, `longitude`, `description`, `street`, `state`, `city`, `zip`, `phone`, `email`, `logo`)
+VALUES ('Little Shop of Magic',36.1138785,-115.2810894,'The games are little here','8665 W Flamingo Rd #2000','Nevada','Las Vegas','89147','7023076127','filler@gmail.com','../images/logos/lsomLogo')
+
+INSERT INTO `gamestoreinfo`(`gameStoreName`, `latitude`, `longitude`, `description`, `street`, `state`, `city`, `zip`, `phone`, `email`, `logo`)
+VALUES ('TCG Junkie',36.0770421,-115.1498379,'The games are for Junkies here','1631 E Sunset Rd c102','Nevada','Las Vegas','89119','7023591028','sales@tcgjunkie.com','../images/logos/tcgJunkieLogo')

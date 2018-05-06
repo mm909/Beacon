@@ -15,7 +15,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$database = "test database";
+$database = "beacon-alpha";
 
 // Note that $database is the data base name on the left hand side of
 // myPHPadmin and not the table name
