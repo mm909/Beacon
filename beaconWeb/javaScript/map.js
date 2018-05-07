@@ -4,6 +4,9 @@
 
 // initMap is the callback function for the map api
 // this function is called once the map call in our "index.php" file is finished
+
+var gameStore = [];
+
 function initMap(){
 
   // How does the map start?
@@ -38,7 +41,7 @@ function initMap(){
            var icon = {
                url:  '../images/logos/beaconLogo.png',
                scaledSize: new google.maps.Size(50, 50), // scaled size
-              
+
            };
 
            var marker = new google.maps.Marker({
@@ -66,6 +69,7 @@ function initMap(){
 
   // Get the list of markers (game stores) from our database
   var _markers = _receiveINFO();
+  gameStore = _markers;
 
   // Parse information from that huge json object
   // We are preping the data to make marker objects
@@ -92,6 +96,6 @@ function initMap(){
     });
   }
 
-
+  mapReady();
 
 }

@@ -13,6 +13,7 @@
     <script language="javascript" type="text/javascript" src="javaScript/map.js"></script>
     <script language="javascript" type="text/javascript" src="javaScript/jQuery/nav.js"></script>
     <script language="javascript" type="text/javascript" src="databaseHandlers/databaseAccess.js"></script>
+    <script language="javascript" type="text/javascript" src="javaScript/jQuery/si.js"></script>
   </head>
 
   <header class="header">
@@ -46,48 +47,7 @@
 
     <div id="container-tab">
       <div id="container-tab1" class="content">
-        <div class="content">
-          <div class="tab">
-            <p>TESTING</p>
-            <p style="float:right">TESTING</p>
-            <p>TESTING</p>
-          </div>
-          <div class="tab">
-            <p>TESTING</p>
-          </div>
-          <div class="tab">
-            <p>TESTING</p>
-          </div>
-          <div class="tab">
-            <p>TESTING</p>
-          </div>
-          <div class="tab">
-            <p>TESTING</p>
-          </div>
-          <div class="tab">
-            <p>TESTING</p>
-          </div>
-          <div class="tab">
-            <p>TESTING</p>
-          </div>
-          <div class="tab">
-            <p>TESTING</p>
-          </div>
-          <div class="tab">
-            <p>TESTING</p>
-          </div>
-          <div class="tab">
-            <p>TESTING</p>
-          </div>
-          <div class="tab">
-            <p>TESTING</p>
-          </div>
-          <div class="tab">
-            <p>TESTING</p>
-          </div>
-          <div class="tab">
-            <p>TESTING</p>
-          </div>
+        <div id="containerForSIItems" class="content">
         </div>
       </div>
     </div>
