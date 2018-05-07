@@ -7,8 +7,7 @@
     <div class="height"></div>
     <title> Map </title>
     <meta charset="utf-8">
-    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>    <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlx94CvcdTa_9PQ2Qgeig2aHPpL2lMsU0&callback=initMap"></script>
     <script language="javascript" type="text/javascript" src="javaScript/map.js"></script>
@@ -32,8 +31,8 @@
     <div class="container">
       <ul>
         <li><a href="#">Map</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
+        <li><a href="#">Matchmaking</a></li>
+        <li><a href="#">Stores</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
     </div>

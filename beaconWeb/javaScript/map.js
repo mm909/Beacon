@@ -9,7 +9,7 @@ function initMap(){
   // How does the map start?
   // Where? How much zoom?
   var options = {
-    zoom:8,
+    zoom:11,
     center:{lat:36.8055,lng:-114.0672}
   }
 
@@ -24,11 +24,30 @@ function initMap(){
              lat: position.coords.latitude,
              lng: position.coords.longitude
            };
-
-           infoWindow.setPosition(pos);
-           infoWindow.setContent('Location found.');
-           infoWindow.open(map);
            map.setCenter(pos);
+
+           var image = '../images/logos/beaconLogo.png';
+
+           tempMarker = {
+             coords:{
+               lat: position.coords.latitude,
+               lng: position.coords.longitude,
+             }
+           }
+
+           var icon = {
+               url:  '../images/logos/beaconLogo.png',
+               scaledSize: new google.maps.Size(50, 50), // scaled size
+              
+           };
+
+           var marker = new google.maps.Marker({
+             position:tempMarker.coords,
+             map:map,
+             icon:icon,
+           });
+
+
          }, function() {
            handleLocationError(true, infoWindow, map.getCenter());
          });
@@ -69,7 +88,7 @@ function initMap(){
   function addMarker(object){
     var marker = new google.maps.Marker({
       position:object.coords,
-      map:map,
+      map:map
     });
   }
 
