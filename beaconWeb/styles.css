@@ -10,11 +10,68 @@ body {
   margin: 0;
 }
 
+.miles {
+  float: right;
+  width: 40%;
+  color: black;
+}
+
+#userLocation {
+  visibility: hidden;
+  display: none;
+}
+
+.address {
+  float: left;
+  max-width: 60%;
+}
+
+.headerInformation a {
+  color: black;
+}
+
+.headerInformation {
+  width: 75%;
+  float: right;
+  text-align: center;
+}
+
+.SIHeader {
+  width: 100%;
+  position: relative;
+  top: 0;
+}
+
+.GSSIlogoBox {
+  max-height: 100px;
+  max-width: 100px;
+  height: 25%;
+  width: 25%;
+  float: left;
+}
+
+.GSSIlogo {
+  height: 100%;
+  width: 100%;
+}
+
+.storeName {
+  width: 75% ;
+  float: right;
+}
+
+.storeName .gameStoreName {
+  font-size:26px;
+  text-align: center;
+  color: black;
+}
+
+
 #container-tab {
   height: 100%;
   width: 20%;
   float: right;
-  padding-top: 5px;
+
 }
 
 #container-tab1 {
@@ -30,8 +87,8 @@ body {
   height: 100%;
   padding-right: 15px;
   padding-left: 8px;
-  padding-bottom: 20px;
   overflow: scroll;
+  overflow-x: hidden;
 }
 
 #container-tab1 * {
@@ -39,7 +96,8 @@ body {
 }
 
 .tab {
-  height:100px;
+  height:25%;
+  min-height: 200px;
   width: 100%;
   background-color: #ffbf84;
   border: 1px;
