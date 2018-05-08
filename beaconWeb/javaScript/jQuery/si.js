@@ -1,3 +1,19 @@
+function bubbleSort(a)
+{
+    var swapped;
+    do {
+        swapped = false;
+        for (var i=0; i < a.length-1; i++) {
+            if (a[i].distance > a[i+1].distance) {
+                var temp = a[i];
+                a[i] = a[i+1];
+                a[i+1] = temp;
+                swapped = true;
+            }
+        }
+    } while (swapped);
+}
+
 
 function mapReady(){
 
@@ -15,52 +31,6 @@ function mapReady(){
     return Math.round(d);
   }
 
-  for(var i = 0; i < gameStore.length; i++){
-
-    var storeName = gameStore[i].gameStoreName;
-    var description = gameStore[i].description;
-    var logo = gameStore[i].logo;
-    var address1 = gameStore[i].street;
-    var address2 = gameStore[i].city;
-    address2 +=  ", " + gameStore[i].state;
-    address2 += " " + gameStore[i].zip;
-    var navAddress  = "https://www.google.com/maps/dir/?api=1&destination=" + address1 + address2;
-
-    $( "#containerForSIItems" ).append(
-      '<div id=store' + i + ' class="tab"></div>'
-    );
-    $( '#store'+i ).append(
-      '<div id=SIHeader' + i + ' class="SIHeader"></div>'
-    );
-
-    $( '#SIHeader'+i ).append(
-      '<div id=storeName' + i + ' class="storeName"></div>'
-    );
-    $( '#SIHeader'+i ).append(
-      '<div id=GSSIlogoBox' + i + ' class="GSSIlogoBox"></div>'
-    );
-    $( '#SIHeader'+i ).append(
-      '<div id=headerInformation' + i + ' class="headerInformation"></div>'
-    );
-
-    $( '#storeName'+i ).append(
-      '<p class="gameStoreName">'+ storeName + '</p>'
-    );
-    $( '#GSSIlogoBox'+i ).append(
-      '<img class="GSSIlogo" src='+ logo + '>'
-    );
-
-    $( '#headerInformation'+i ).append(
-      "<a target='_blank' href='' id=address" + i + " class='address'>"+ address1 +
-      "<br>"+ address2 + "</a>"
-    );
-    $('#address' + i).attr('href', navAddress);
-
-  }
-
-  $( "#containerForSIItems" ).append(
-    '<div id=store'+ ' class="tab"><p>Testing</p></div>'
-  );
 
   navigator.geolocation.getCurrentPosition(function(position) {
       userLocationLat = position.coords.latitude;
@@ -77,16 +47,60 @@ function mapReady(){
         dist *= 10;
         dist = Math.floor(dist);
         dist /= 10;
+
+        gameStore[i].distance = dist;
+      }
+      bubbleSort(gameStore);
+      console.table(gameStore)
+
+      for(var i = 0; i < gameStore.length; i++){
+
+        var storeName = gameStore[i].gameStoreName;
+        var description = gameStore[i].description;
+        var logo = gameStore[i].logo;
+        var address1 = gameStore[i].street;
+        var address2 = gameStore[i].city;
+        address2 +=  ", " + gameStore[i].state;
+        address2 += " " + gameStore[i].zip;
+        var dist = gameStore[i].distance;
+        var navAddress  = "https://www.google.com/maps/dir/?api=1&destination=" + address1 + address2;
+
+        $( "#containerForSIItems" ).append(
+          '<div id=store' + i + ' class="tab"></div>'
+        );
+        $( '#store'+i ).append(
+          '<div id=SIHeader' + i + ' class="SIHeader"></div>'
+        );
+
+        $( '#SIHeader'+i ).append(
+          '<div id=storeName' + i + ' class="storeName"></div>'
+        );
+        $( '#SIHeader'+i ).append(
+          '<div id=GSSIlogoBox' + i + ' class="GSSIlogoBox"></div>'
+        );
+        $( '#SIHeader'+i ).append(
+          '<div id=headerInformation' + i + ' class="headerInformation"></div>'
+        );
+
+        $( '#storeName'+i ).append(
+          '<p class="gameStoreName">'+ storeName + '</p>'
+        );
+        $( '#GSSIlogoBox'+i ).append(
+          '<img class="GSSIlogo" src='+ logo + '>'
+        );
+
+        $( '#headerInformation'+i ).append(
+          "<a target='_blank' href='' id=address" + i + " class='address'>"+ address1 +
+          "<br>"+ address2 + "</a>"
+        );
+        $('#address' + i).attr('href', navAddress);
+
         $( "#headerInformation" + i ).append(
           '<div id=distance'+ ' class="miles"><p>'+ dist + ' Miles </p></div>'
         );
-        distances.push({distance: dist, store: gameStore[i]})
+
       }
   })
 
-  console.log(distances)
-  for(var i = 0; i < gameStore.length; i++){
-    console.log(distances[i])
-  }
 
 }
