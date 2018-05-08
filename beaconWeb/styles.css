@@ -10,6 +10,25 @@ body {
   margin: 0;
 }
 
+.PlayerInformation {
+  height: 50%;
+  width: 100%;
+}
+
+.SIBreak {
+
+}
+
+.DPspacer {
+  float: right;
+  width: 40%;
+}
+
+.phoneNumber {
+  float: right;
+  width: 40%;
+}
+
 .miles {
   float: right;
   width: 40%;
@@ -19,6 +38,11 @@ body {
 #userLocation {
   visibility: hidden;
   display: none;
+}
+
+.SIBreak {
+  width: 100%;
+
 }
 
 .address {
@@ -38,14 +62,16 @@ body {
 
 .SIHeader {
   width: 100%;
-  position: relative;
+  height: 50%;
   top: 0;
+  padding-top: 5px;
+  box-sizing: border-box;
 }
 
 .GSSIlogoBox {
   max-height: 100px;
   max-width: 100px;
-  height: 25%;
+  height: 100%;
   width: 25%;
   float: left;
 }

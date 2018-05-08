@@ -44,6 +44,7 @@ function genSI(){
         // Get local vars
         var storeName   = gameStore[i].gameStoreName;
         var description = gameStore[i].description;
+        var phone       = gameStore[i].phone;
         var logo        = gameStore[i].logo;
         var address1    = gameStore[i].street;
         var address2    = gameStore[i].city;
@@ -59,6 +60,13 @@ function genSI(){
         // Create header container
         $( '#store'+i ).append(
           '<div id=SIHeader' + i + ' class="SIHeader"></div>'
+        );
+        // Create a line
+        $( '#store'+i ).append(
+          '<div id=SIBreak' + i + ' class="SIBreak"><hr></div>'
+        );
+        $( '#store'+i ).append(
+          '<div id=PlayerInformation' + i + ' class="PlayerInformation"></div>'
         );
 
         // Create store name container
@@ -92,6 +100,14 @@ function genSI(){
         );
         // Attach nav link to address
         $('#address' + i).attr('href', navAddress);
+
+        $( "#headerInformation" + i ).append(
+          '<div id=DPspacer'+ i +' class="DPspacer"><br></div>'
+        );
+        $( "#headerInformation" + i ).append(
+          '<div id=phone'+ i +' class="phoneNumber"><p>'+ phoneNumberParser(phone) + ' </p></div>'
+        );
+
       } // Close for loop
   }) // Close callback
 } // Close genSI
