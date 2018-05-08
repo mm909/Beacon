@@ -14,6 +14,7 @@
     <script language="javascript" type="text/javascript" src="javaScript/map.js"></script>
     <script language="javascript" type="text/javascript" src="javaScript/jQuery/nav.js"></script>
     <script language="javascript" type="text/javascript" src="databaseHandlers/databaseAccess.js"></script>
+    <script language="javascript" type="text/javascript" src="databaseHandlers/addNewGameStore.js"></script>
     <script language="javascript" type="text/javascript" src="javaScript/jQuery/si.js"></script>
     <script language="javascript" type="text/javascript" src="javaScript/shared.js"></script>
   </head>
