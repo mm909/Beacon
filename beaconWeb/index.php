@@ -15,11 +15,10 @@
     <script language="javascript" type="text/javascript" src="javaScript/jQuery/nav.js"></script>
     <script language="javascript" type="text/javascript" src="databaseHandlers/databaseAccess.js"></script>
     <script language="javascript" type="text/javascript" src="javaScript/jQuery/si.js"></script>
+    <script language="javascript" type="text/javascript" src="javaScript/shared.js"></script>
   </head>
 
   <header class="header">
-
-
     <div class="container">
       <div class="logoContainer">
         <img src="../images/logos/beaconLogo.png" class="logo">
@@ -43,20 +42,15 @@
   </div>
 
   <body>
-
     <div class="container-map">
       <div id="map" class="Map"></div>
     </div>
-
     <div id="container-tab">
       <div id="container-tab1" class="content">
         <div id="containerForSIItems" class="content">
-
-
         </div>
       </div>
     </div>
-
   </body>
 
 </html>

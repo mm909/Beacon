@@ -5,12 +5,6 @@
 // initMap is the callback function for the map api
 // this function is called once the map call in our "index.php" file is finished
 
-var gameStore = [];
-var distances = [];
-var userLocationLat;
-var userLocationLng;
-var userPos = [];
-
 function initMap(){
 
   // How does the map start?
@@ -99,5 +93,6 @@ function initMap(){
     });
   }
 
-  mapReady();
+  // Call the function to create the summary tables
+  genSI();
 }

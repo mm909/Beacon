@@ -5,7 +5,6 @@ $( document ).ready(function() {
     var Vnav = false;
     $("#container-tab").hide();
 
-
     $('#threeLines').hover(function(){
         if(!(Hnav || Vnav))
         $(this).attr('src',"../images/menuUI/menuHover.png");

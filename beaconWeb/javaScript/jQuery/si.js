@@ -1,21 +1,7 @@
-function bubbleSort(a)
-{
-    var swapped;
-    do {
-        swapped = false;
-        for (var i=0; i < a.length-1; i++) {
-            if (a[i].distance > a[i+1].distance) {
-                var temp = a[i];
-                a[i] = a[i+1];
-                a[i+1] = temp;
-                swapped = true;
-            }
-        }
-    } while (swapped);
-}
+// This function creates the SI using jquery
+// Last updated - Mikian - 5/7/18
 
-
-function mapReady(){
+function genSI(){
 
   google.maps.LatLng.prototype.distanceFrom = function(latlng) {
     var lat = [this.lat(), latlng.lat()]
@@ -31,76 +17,81 @@ function mapReady(){
     return Math.round(d);
   }
 
-
+  // Call the google API to get the current location and the pass in
+  // This NOTE: CALLBACK function
   navigator.geolocation.getCurrentPosition(function(position) {
-      userLocationLat = position.coords.latitude;
-      userLocationLng = position.coords.longitude;
-      userPos.push(userLocationLat)
-      userPos.push(userLocationLng)
-      for(var i = 0; i < gameStore.length; i++){
-        var test1 = gameStore[i].latitude;
-        var test2 = gameStore[i].longitude;
-        var loc1 = new google.maps.LatLng(userLocationLat, userLocationLng);
-        var loc2 = new google.maps.LatLng(test1, test2);
-        var dist = loc2.distanceFrom(loc1);
-        dist = dist/1000 * 0.621371;
-        dist *= 10;
-        dist = Math.floor(dist);
-        dist /= 10;
 
-        gameStore[i].distance = dist;
+      // Get user's posistion
+      userPos = { lat: position.coords.latitude, lng: position.coords.longitude }
+
+      // Run through each store and get the distance from the user to the store.
+      for(var i = 0; i < gameStore.length; i++){
+        // Get store's position
+        storePos = { lat: gameStore[i].latitude, lng: gameStore[i].longitude}
+        // Convert it to google format
+        var user = new google.maps.LatLng(userPos.lat, userPos.lng);
+        var store = new google.maps.LatLng(storePos.lat, storePos.lng);
+        gameStore[i].distance = getDistance(user, store);
       }
-      bubbleSort(gameStore);
-      console.table(gameStore)
 
+      // Sort the stores based on the distance from the player
+      bubbleSort(gameStore);
+      // console.table(gameStore)
+
+      // Create the SI table
       for(var i = 0; i < gameStore.length; i++){
 
-        var storeName = gameStore[i].gameStoreName;
+        // Get local vars
+        var storeName   = gameStore[i].gameStoreName;
         var description = gameStore[i].description;
-        var logo = gameStore[i].logo;
-        var address1 = gameStore[i].street;
-        var address2 = gameStore[i].city;
-        address2 +=  ", " + gameStore[i].state;
-        address2 += " " + gameStore[i].zip;
-        var dist = gameStore[i].distance;
+        var logo        = gameStore[i].logo;
+        var address1    = gameStore[i].street;
+        var address2    = gameStore[i].city;
+            address2   +=  ", " + gameStore[i].state;
+            address2   += " " + gameStore[i].zip;
+        var dist        = gameStore[i].distance;
         var navAddress  = "https://www.google.com/maps/dir/?api=1&destination=" + address1 + address2;
 
+        // Create container
         $( "#containerForSIItems" ).append(
           '<div id=store' + i + ' class="tab"></div>'
         );
+        // Create header container
         $( '#store'+i ).append(
           '<div id=SIHeader' + i + ' class="SIHeader"></div>'
         );
 
+        // Create store name container
         $( '#SIHeader'+i ).append(
           '<div id=storeName' + i + ' class="storeName"></div>'
         );
+        // Create logo container
         $( '#SIHeader'+i ).append(
           '<div id=GSSIlogoBox' + i + ' class="GSSIlogoBox"></div>'
         );
+        // Create header information container
         $( '#SIHeader'+i ).append(
           '<div id=headerInformation' + i + ' class="headerInformation"></div>'
         );
 
+        // Add store name content
         $( '#storeName'+i ).append(
           '<p class="gameStoreName">'+ storeName + '</p>'
         );
+        // Add store logo content
         $( '#GSSIlogoBox'+i ).append(
           '<img class="GSSIlogo" src='+ logo + '>'
         );
-
+        // Add address content
         $( '#headerInformation'+i ).append(
           "<a target='_blank' href='' id=address" + i + " class='address'>"+ address1 +
           "<br>"+ address2 + "</a>"
         );
-        $('#address' + i).attr('href', navAddress);
-
         $( "#headerInformation" + i ).append(
           '<div id=distance'+ ' class="miles"><p>'+ dist + ' Miles </p></div>'
         );
-
-      }
-  })
-
-
-}
+        // Attach nav link to address
+        $('#address' + i).attr('href', navAddress);
+      } // Close for loop
+  }) // Close callback
+} // Close genSI
