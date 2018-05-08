@@ -24,7 +24,7 @@
       <div class="logoContainer">
         <img src="../images/logos/beaconLogo.png" class="logo">
       </div>
-      <a href="index.php">Beacon!</a>
+      <a href="#">Beacon!</a>
       <div class="settingsContainer">
         <img src="../images/menuUI/menu.png" id="threeLines">
       </div>
