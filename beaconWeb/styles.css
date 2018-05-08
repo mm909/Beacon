@@ -10,6 +10,32 @@ body {
   margin: 0;
 }
 
+.miles {
+  float: right;
+  width: 40%;
+  color: black;
+}
+
+#userLocation {
+  visibility: hidden;
+  display: none;
+}
+
+.address {
+  float: left;
+  max-width: 60%;
+}
+
+.headerInformation a {
+  color: black;
+}
+
+.headerInformation {
+  width: 75%;
+  float: right;
+  text-align: center;
+}
+
 .SIHeader {
   width: 100%;
   position: relative;
@@ -19,9 +45,8 @@ body {
 .GSSIlogoBox {
   max-height: 100px;
   max-width: 100px;
-  height: 20%;
-  width: 20%;
-  padding-left: 5px;
+  height: 25%;
+  width: 25%;
   float: left;
 }
 
@@ -31,13 +56,14 @@ body {
 }
 
 .storeName {
+  width: 75% ;
+  float: right;
 }
 
 .storeName .gameStoreName {
-  font-size:22px;
-
+  font-size:26px;
   text-align: center;
-  color: #1f2833;
+  color: black;
 }
 
 

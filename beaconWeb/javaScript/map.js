@@ -6,6 +6,10 @@
 // this function is called once the map call in our "index.php" file is finished
 
 var gameStore = [];
+var distances = [];
+var userLocationLat;
+var userLocationLng;
+var userPos = [];
 
 function initMap(){
 
@@ -41,7 +45,6 @@ function initMap(){
            var icon = {
                url:  '../images/logos/beaconLogo.png',
                scaledSize: new google.maps.Size(50, 50), // scaled size
-
            };
 
            var marker = new google.maps.Marker({
@@ -97,5 +100,4 @@ function initMap(){
   }
 
   mapReady();
-
 }
