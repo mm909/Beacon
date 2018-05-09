@@ -62,9 +62,9 @@ VALUES ('$gameStoreName',0,0,0,0,0,0,0);";
 
 // Send the request and output data
 echo mysqli_query($conn,$sql);
+echo mysqli_error($conn);
 echo  "<br><br>" ;
 echo $sql;
-
 echo  "<br><br>" ;
 echo "DONE";
 echo  "<br><br>" ;

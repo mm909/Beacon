@@ -52,6 +52,7 @@ $sql = "UPDATE `currentplayerinfo`
 
 // Send the request and output data
 echo mysqli_query($conn,$sql);
+echo mysqli_error($conn);
 echo  "<br><br>" ;
 echo $sql;
 echo  "<br><br>" ;

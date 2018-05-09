@@ -69,6 +69,71 @@ function _RECEIVE_EVENTS(){
 /* --- */
 
 /*
+var BeaconObject = {
+  GSID:
+  gameStoreName:
+  dateTimeCreated:
+  dateTimeOfEvent:
+  player1Name:
+  player2Name:
+  player3Name:
+  player4Name:
+  player5Name:
+  player6Name:
+  player7Name:
+  player8Name:
+  game:
+  description:
+  flags:
+  Player1phone:
+}
+
+var BeaconObject = {
+  GSID: 1,
+  gameStoreName: "Darkside Games",
+  dateTimeCreated: '2018-05-09 20:00:00',
+  dateTimeOfEvent: '2018-05-09 22:00:00',
+  player1Name: "Mikian",
+  player2Name: "Mikians Frist Friend",
+  player3Name: "Mikians Second Friend",
+  player4Name: "Mikians Third Friend",
+  player5Name: "Mikians Fourth Friend",
+  player6Name: "Mikians Fifth Friend",
+  player7Name: "Mikians Sixth Friend",
+  player8Name: "Mikians Seventh Friend",
+  game: "Magic!",
+  description: "Looking for someone to play modern with.",
+  flags: "modern free fun beginner allday",
+  Player1phone: "7777777777"
+}
+*/
+
+function _SUBMIT_BEACON(BeaconObject){
+  xmlhttp = new XMLHttpRequest();
+
+  xmlhttp.open("GET","databaseHandlers/SUBMIT_BEACON.php?"
+  +"GSID="+BeaconObject.GSID
+  +"&gameStoreName="+BeaconObject.gameStoreName
+  +"&dateTimeCreated="+BeaconObject.dateTimeCreated
+  +"&dateTimeOfEvent="+BeaconObject.dateTimeOfEvent
+  +"&player1Name="+BeaconObject.player1Name
+  +"&player2Name="+BeaconObject.player2Name
+  +"&player3Name="+BeaconObject.player3Name
+  +"&player4Name="+BeaconObject.player4Name
+  +"&player5Name="+BeaconObject.player5Name
+  +"&player6Name="+BeaconObject.player6Name
+  +"&player7Name="+BeaconObject.player7Name
+  +"&player8Name="+BeaconObject.player8Name
+  +"&game="+BeaconObject.game
+  +"&description="+BeaconObject.description
+  +"&flags="+BeaconObject.flags
+  +"&Player1phone="+BeaconObject.Player1phone
+  ,false);
+
+  xmlhttp.send();
+}
+
+/*
 var PlayerObject = {
   GSID:
   gameStoreName:
@@ -97,7 +162,7 @@ var PlayerObject = {
 function _SUBMIT_PLAYER(PlayerObject){
   xmlhttp = new XMLHttpRequest();
 
-  xmlhttp.open("GET","databaseHandlers/SUBMIT_PLAYER.php?"
+  xmlhttp.open("GET","databaseHandlers/UPDATE_PLAYER.php?"
   +"GSID="+PlayerObject.GSID
   +"&gameStoreName="+PlayerObject.gameStoreName
   +"&playersDND="+PlayerObject.playersDND

@@ -1,3 +1,29 @@
+CREATE TABLE beacons (
+    BEACONID int PRIMARY KEY NOT null AUTO_INCREMENT,
+
+    GSID int,
+    gameStoreName varchar(255),
+
+    dateTimeCreated datetime,
+    dateTimeOfEvent datetime,
+
+    player1Name text,
+    player2Name text,
+    player3Name text,
+    player4Name text,
+    player5Name text,
+    player6Name text,
+    player7Name text,
+    player8Name text,
+
+    game text,
+    description text,
+    flags text,
+    
+    Player1phone text
+);
+
+
 CREATE TABLE gameStoreInfo (
     EVENTID int PRIMARY KEY NOT null AUTO_INCREMENT,
     GSID int,

@@ -36,6 +36,7 @@
       <ul>
         <li><a href="#">Map</a></li>
         <li><a href="#">Matchmaking</a></li>
+        <li><a href="#">Events</a></li>
         <li><a href="#">Stores</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
