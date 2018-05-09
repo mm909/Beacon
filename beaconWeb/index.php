@@ -12,7 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script language="javascript" type="text/javascript" src="databaseHandlers/databaseAccess.js"></script>
     <script language="javascript" type="text/javascript" src="javaScript/shared.js"></script>
-    <script language="javascript" type="text/javascript" src="javaScript/getInformation.js"></script>
+    <script language="javascript" type="text/javascript" src="databaseHandlers/getInformation.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlx94CvcdTa_9PQ2Qgeig2aHPpL2lMsU0&callback=initMap"></script>
     <script language="javascript" type="text/javascript" src="javaScript/map.js"></script>
     <script language="javascript" type="text/javascript" src="javaScript/jQuery/nav.js"></script>
