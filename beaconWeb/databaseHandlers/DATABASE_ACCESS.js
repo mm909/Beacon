@@ -26,43 +26,37 @@ function _RECEIVE_GAMESTORES(){
 
 function _RECEIVE_PLAYERS(){
   var xmlhttp = new XMLHttpRequest();
-
-  // This function executes once the PHP script finishes
   xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-
-        // This.responceText is everything that the PHP script 'echo'ed
-        // The receiveINFO.php script echos a json'ed version of a SQL query
-        // We then take that echo'ed text and parse it into an array
-
-
          _markers = JSON.parse(this.responseText);
       }
   };
-
-  // Actually send the request
-  // Using the "GET" php protocals
-  // Script in "receiveINFO"
-  // Run the script async meaning that the js must wait until this finishes
   xmlhttp.open("GET", "databaseHandlers/RECEIVE_PLAYERS.php", false);
   xmlhttp.send();
-
-  // Return the array of JSON objects from our database
   return _markers;
 }
 
 function _RECEIVE_EVENTS(){
   var xmlhttp = new XMLHttpRequest();
-
   xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
          _markers = JSON.parse(this.responseText);
       }
   };
-
   xmlhttp.open("GET", "databaseHandlers/RECEIVE_EVENTS.php", false);
   xmlhttp.send();
+  return _markers;
+}
 
+function _RECEIVE_BEACONS(){
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+         _markers = JSON.parse(this.responseText);
+      }
+  };
+  xmlhttp.open("GET", "databaseHandlers/RECEIVE_BEACONS.php", false);
+  xmlhttp.send();
   return _markers;
 }
 
@@ -290,7 +284,6 @@ var gameStoreOject = {
   logo: "/GitHub/Beacon/images/logos/DEFAULT.jpg",
   email: "test@testing.com"
 }
-
 */
 
 function _SUBMIT_GAMESTORE(gameStoreObject){
