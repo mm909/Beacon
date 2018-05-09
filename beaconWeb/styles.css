@@ -15,6 +15,21 @@ body {
   text-align: center;
 }
 
+.gridcontainer2 {
+  display: grid;
+  grid-template-columns: auto;
+  background-color: rgba(31,40,51,0.2);
+  color: black;
+  padding: 0px;
+  margin: 0px;
+
+}
+
+.grid-item2 {
+  text-align: center;
+}
+
+
 .gridcontainer {
   display: grid;
   grid-template-columns: auto auto;
@@ -41,12 +56,32 @@ body {
   text-align: center;
 }
 
-.totalPlayers {
+.events {
+  width: 50%;
   text-align: center;
-  padding-top: 5px;
   padding-left: 5px;
   box-sizing: border-box;
   color: black;
+  display: inline;
+}
+
+.events p {
+  width: 50%;
+  float: right;
+}
+
+.totalPlayers {
+  width: 50%;
+  display: inline;
+  text-align: center;
+  box-sizing: border-box;
+  color: black;
+}
+
+.totalPlayers p {
+  width: 50%;
+  float: left;
+
 }
 
 .PlayerInformation {
@@ -112,6 +147,8 @@ body {
   height: 100%;
   width: 25%;
   float: left;
+  padding-left: 5px;
+  box-sizing: border-box;
 }
 
 .GSSIlogo {

@@ -1,6 +1,22 @@
 var gameStore = [];
 var players = [];
 
+function bubbleSortPlayers(a)
+{
+    var swapped;
+    do {
+        swapped = false;
+        for (var i=0; i < a.length-1; i++) {
+            if (a[i].amount < a[i+1].amount) {
+                var temp = a[i];
+                a[i] = a[i+1];
+                a[i+1] = temp;
+                swapped = true;
+            }
+        }
+    } while (swapped);
+}
+
 function bubbleSort(a)
 {
     var swapped;

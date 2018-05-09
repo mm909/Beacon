@@ -110,42 +110,50 @@ function genSI(){
         );
 
         $( '#PlayerInformation'+i ).append(
-          '<div id=totalPlayers' + i + ' class="totalPlayers"><p> Total Players: ' + players[i].playersTotal + '</p></div>'
+          '<div id=grid-container2' + i + ' class="gridcontainer2"></div>'
         );
 
-        $( '#PlayerInformation'+i ).append(
+        $( '#grid-container2'+ i  ).append(
           '<div id=grid-container' + i + ' class="gridcontainer"></div>'
         );
 
+        $( '#grid-container2'+ i ).append(
+          '<div class="grid-item2">Total Players: ' + players[i].playersTotal + '</div>'
+        );
+
+
+/*
+        $( '#PlayerInformation'+i ).append(
+          '<div id=totalPlayers' + i + ' class="totalPlayers"><p> Total Players: ' + players[i].playersTotal + '</p></div>'
+        );
+        $( '#PlayerInformation'+i ).append(
+          '<div id=events' + i + ' class="events"><p> Total Events: ' + players[i].playersTotal + '</p></div>'
+        );
+*/
+        var sortedArray = [];
+
+        sortedArray.push({name:'Magic',amount:players[i].playersMagic})
+        sortedArray.push({name:'Pokemon',amount:players[i].playersPokemon})
+        sortedArray.push({name:'Yugioh',amount:players[i].playersYugioh})
+        sortedArray.push({name:'DND',amount:players[i].playersDND})
+        sortedArray.push({name:'Warhammer',amount:players[i].playersWarhammer})
+        bubbleSortPlayers(sortedArray);
+        console.table(sortedArray)
+
+
+
+
         if(players[i].playersTotal > 0){
-          if(players[i].playersMagic > 0){
-            $( '#grid-container'+ i ).append(
-              '<div class="grid-item">Magic Players: ' + players[i].playersMagic + '</div>'
-            );
-          }
-          if(players[i].playersPokemon > 0){
-            $( '#grid-container'+ i ).append(
-              '<div class="grid-item">Pokemon Players: ' + players[i].playersPokemon + '</div>'
-            );
-          }
-          if(players[i].playersYugioh > 0){
-            $( '#grid-container'+ i ).append(
-              '<div class="grid-item">Yugioh Players: ' + players[i].playersYugioh + '</div>'
-            );
-          }
-          if(players[i].playersDND > 0){
-            $( '#grid-container'+ i ).append(
-              '<div class="grid-item">DND Players: ' + players[i].playersDND + '</div>'
-            );
-          }
-          if(players[i].playersWarhammer > 0){
-            $( '#grid-container'+ i ).append(
-              '<div class="grid-item">Warhammer Players: ' + players[i].playersWarhammer + '</div>'
-            );
+          for(var j = 0; j < sortedArray.length; j++){
+            if(sortedArray[j].amount > 0){
+              $( '#grid-container'+ i ).append(
+                '<div class="grid-item">' + sortedArray[j].name + ' Players: ' + sortedArray[j].amount + '</div>'
+              );
+            }
           }
           if(players[i].playersOther > 0){
             $( '#grid-container'+ i ).append(
-              '<div class="grid-item">Other Players: ' + players[i].playersOther + '</div>'
+              '<div class="grid-item"><strong>Other Players: ' + players[i].playersOther + '</div>'
             );
           }
         } else {
@@ -153,7 +161,6 @@ function genSI(){
             '<p class="grid-item message"> No one is here. Don\'t forget to check in! </p>'
           );
         }
-
 
           $( '.PlayerInformation').hover(
             function() {
@@ -168,6 +175,8 @@ function genSI(){
 
             }
           );
+
+
 
           /*<div class="grid-item">1</div>*/
 
