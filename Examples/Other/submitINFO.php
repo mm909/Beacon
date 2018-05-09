@@ -27,3 +27,26 @@ echo  "<br><br>" ;
 */
 
 ?>
+
+function _submitINFO(name, lat, lng, players, description){
+  // Create the request
+  xmlhttp = new XMLHttpRequest();
+
+  // Form the request
+  // Use the GET method
+  // Call the submitINFO.php script
+  // Pass into the PHP script the following values
+  // into vars called "name", "lat", "lng," ...
+  // Run this request sync because the js can run without
+  // this scrip being finished
+  xmlhttp.open("GET","databaseHandlers/submitINFO.php?"
+  +"name="+name
+  +"&lat="+lat
+  +"&lng="+lng
+  +"&players="+players
+  +"&description="+description
+  ,true);
+
+  // Sent the request
+  xmlhttp.send();
+}

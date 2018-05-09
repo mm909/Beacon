@@ -32,7 +32,7 @@ var gameStoreOject = {
 */
 
 // Connect to database
-include_once 'connect.php';
+include_once 'CONNECT.php';
 
 // get the information passed
 // NOTE: 'get' does not have anything to do with "_GET['x']"

@@ -1,5 +1,10 @@
 var gameStore = [];
+// Values in object
+/*
+ *
+ */
 var players = [];
+var events = [];
 
 function bubbleSortPlayers(a)
 {

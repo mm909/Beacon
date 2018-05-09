@@ -1,7 +1,7 @@
 <?php
 
 // Connect to database
-include 'connect.php';
+include 'CONNECT.php';
 
 // Form the SQL query
 $sql = "SELECT * FROM currentplayerinfo;";
