@@ -10,8 +10,46 @@ body {
   margin: 0;
 }
 
+.message {
+  color: red;
+  text-align: center;
+}
+
+.gridcontainer {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: rgba(31,40,51,0.2);
+  color: black;
+}
+
+.grid-item {
+  text-align: center;
+}
+
+.catPlayers {
+  min-width: 33%;
+  min-height: 50%;
+  display: inline-grid;
+  box-sizing: border-box;
+  padding: 0px;
+}
+
+.catPlayers p {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  text-align: center;
+}
+
+.totalPlayers {
+  text-align: center;
+  padding-top: 5px;
+  padding-left: 5px;
+  box-sizing: border-box;
+  color: black;
+}
+
 .PlayerInformation {
-  height: 50%;
   width: 100%;
 }
 

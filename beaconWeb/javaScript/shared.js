@@ -1,4 +1,5 @@
 var gameStore = [];
+var players = [];
 
 function bubbleSort(a)
 {

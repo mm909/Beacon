@@ -12,7 +12,7 @@
 //           row in the database
 
 
-function _receiveINFO(){
+function _RECEIVEGAMESTORE(){
   var xmlhttp = new XMLHttpRequest();
 
   // This function executes once the PHP script finishes
@@ -32,7 +32,34 @@ function _receiveINFO(){
   // Using the "GET" php protocals
   // Script in "receiveINFO"
   // Run the script async meaning that the js must wait until this finishes
-  xmlhttp.open("GET", "databaseHandlers/receiveINFO.php", false);
+  xmlhttp.open("GET", "databaseHandlers/RECEIVE_GAMESTORE.php", false);
+  xmlhttp.send();
+
+  // Return the array of JSON objects from our database
+  return _markers;
+}
+
+function _RECEIVEPLAYERS(){
+  var xmlhttp = new XMLHttpRequest();
+
+  // This function executes once the PHP script finishes
+  xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+
+        // This.responceText is everything that the PHP script 'echo'ed
+        // The receiveINFO.php script echos a json'ed version of a SQL query
+        // We then take that echo'ed text and parse it into an array
+
+
+         _markers = JSON.parse(this.responseText);
+      }
+  };
+
+  // Actually send the request
+  // Using the "GET" php protocals
+  // Script in "receiveINFO"
+  // Run the script async meaning that the js must wait until this finishes
+  xmlhttp.open("GET", "databaseHandlers/RECEIVE_PLAYERS.php", false);
   xmlhttp.send();
 
   // Return the array of JSON objects from our database
