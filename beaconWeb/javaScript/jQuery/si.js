@@ -121,15 +121,6 @@ function genSI(){
           '<div class="grid-item2">Total Players: ' + players[i].playersTotal + '</div>'
         );
 
-
-/*
-        $( '#PlayerInformation'+i ).append(
-          '<div id=totalPlayers' + i + ' class="totalPlayers"><p> Total Players: ' + players[i].playersTotal + '</p></div>'
-        );
-        $( '#PlayerInformation'+i ).append(
-          '<div id=events' + i + ' class="events"><p> Total Events: ' + players[i].playersTotal + '</p></div>'
-        );
-*/
         var sortedArray = [];
 
         sortedArray.push({name:'Magic',amount:players[i].playersMagic})
@@ -139,9 +130,6 @@ function genSI(){
         sortedArray.push({name:'Warhammer',amount:players[i].playersWarhammer})
         bubbleSortPlayers(sortedArray);
         console.table(sortedArray)
-
-
-
 
         if(players[i].playersTotal > 0){
           for(var j = 0; j < sortedArray.length; j++){
