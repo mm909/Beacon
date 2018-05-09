@@ -63,9 +63,122 @@ function _RECEIVE_EVENTS(){
   xmlhttp.open("GET", "databaseHandlers/RECEIVE_EVENTS.php", false);
   xmlhttp.send();
 
-  // Return the array of JSON objects from our database
   return _markers;
 }
+
+/* --- */
+
+/*
+var PlayerObject = {
+  GSID:
+  gameStoreName:
+  playersDND:
+  playersMagic:
+  playersOther:
+  playersPokemon:
+  playersTotal:
+  playersWarhammer:
+  playersYugioh:
+}
+
+var PlayerObject = {
+  GSID: 1,
+  gameStoreName: "Darkside Games",
+  playersDND: 0,
+  playersMagic: 1,
+  playersOther: 0,
+  playersPokemon: 0,
+  playersTotal: 1,
+  playersWarhammer: 0,
+  playersYugioh: 0
+}
+*/
+
+function _SUBMIT_PLAYER(PlayerObject){
+  xmlhttp = new XMLHttpRequest();
+
+  xmlhttp.open("GET","databaseHandlers/SUBMIT_PLAYER.php?"
+  +"GSID="+PlayerObject.GSID
+  +"&gameStoreName="+PlayerObject.gameStoreName
+  +"&playersDND="+PlayerObject.playersDND
+  +"&playersMagic="+PlayerObject.playersMagic
+  +"&playersOther="+PlayerObject.playersOther
+  +"&playersPokemon="+PlayerObject.playersPokemon
+  +"&playersTotal="+PlayerObject.playersTotal
+  +"&playersWarhammer="+PlayerObject.playersWarhammer
+  +"&playersYugioh="+PlayerObject.playersYugioh
+  ,true);
+
+  xmlhttp.send();
+}
+
+/*
+var PlayerObject = {
+  GSID:
+  gameStoreName:
+  playersDND:
+  playersMagic:
+  playersOther:
+  playersPokemon:
+  playersTotal:
+  playersWarhammer:
+  playersYugioh:
+}
+
+var PlayerObject = {
+  GSID: 1,
+  gameStoreName: "Darkside Games",
+  playersDND: 0,
+  playersMagic: 1,
+  playersOther: 0,
+  playersPokemon: 0,
+  playersTotal: 1,
+  playersWarhammer: 0,
+  playersYugioh: 0
+}
+*/
+
+function _REMOVE_PLAYER(PlayerObject){
+  xmlhttp = new XMLHttpRequest();
+
+  xmlhttp.open("GET","databaseHandlers/REMOVE_PLAYER.php?"
+  +"GSID="+PlayerObject.GSID
+  +"&gameStoreName="+PlayerObject.gameStoreName
+  +"&playersDND="+PlayerObject.playersDND
+  +"&playersMagic="+PlayerObject.playersMagic
+  +"&playersOther="+PlayerObject.playersOther
+  +"&playersPokemon="+PlayerObject.playersPokemon
+  +"&playersTotal="+PlayerObject.playersTotal
+  +"&playersWarhammer="+PlayerObject.playersWarhammer
+  +"&playersYugioh="+PlayerObject.playersYugioh
+  ,true);
+
+  xmlhttp.send();
+}
+
+/*
+var EventObject = {
+  GSID:
+  gameStoreName:
+  eventName:
+  description:
+  prizes:
+  eventDateTime:
+  eventFee:
+  expectedPlayers:
+}
+
+var EventObject = {
+  GSID: 1,
+  gameStoreName: "Darkside Games",
+  eventName: "FNM",
+  description: "This is Friday Night Magic",
+  prizes: "Lots of stuff",
+  eventDateTime: '2018-05-09 20:00:00',
+  eventFee: 10.00,
+  expectedPlayers: 20
+}
+*/
 
 function _SUBMIT_EVENT(EventObject){
   xmlhttp = new XMLHttpRequest();
@@ -83,11 +196,6 @@ function _SUBMIT_EVENT(EventObject){
 
   xmlhttp.send();
 }
-
-// Goal -> Function takes in params like:
-// name, address, lat, lng, ...
-// Basically all of the things needed to create a table in the database
-// This funcion will then make an ajax request and add it to ALL databases
 
 /*
 var gameStoreOject = {
@@ -121,7 +229,6 @@ var gameStoreOject = {
 */
 
 function _SUBMIT_GAMESTORE(gameStoreObject){
-  // Create the request
   xmlhttp = new XMLHttpRequest();
 
   xmlhttp.open("GET","databaseHandlers/addNewGameStore.php?"
@@ -138,6 +245,5 @@ function _SUBMIT_GAMESTORE(gameStoreObject){
   +"&email="+gameStoreObject.email
   ,true);
 
-  // Sent the request
   xmlhttp.send();
 }
