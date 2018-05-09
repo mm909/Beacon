@@ -10,6 +10,98 @@ body {
   margin: 0;
 }
 
+.message {
+  color: red;
+  text-align: center;
+}
+
+.gridcontainer2 {
+  display: grid;
+  grid-template-columns: auto;
+  background-color: rgba(31,40,51,0.2);
+  color: black;
+  padding: 0px;
+  margin: 0px;
+
+}
+
+.grid-item2 {
+  text-align: center;
+}
+
+
+.gridcontainer {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: rgba(31,40,51,0.2);
+  color: black;
+}
+
+.grid-item {
+  text-align: center;
+}
+
+.catPlayers {
+  min-width: 33%;
+  min-height: 50%;
+  display: inline-grid;
+  box-sizing: border-box;
+  padding: 0px;
+}
+
+.catPlayers p {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  text-align: center;
+}
+
+.events {
+  width: 50%;
+  text-align: center;
+  padding-left: 5px;
+  box-sizing: border-box;
+  color: black;
+  display: inline;
+}
+
+.events p {
+  width: 50%;
+  float: right;
+}
+
+.totalPlayers {
+  width: 50%;
+  display: inline;
+  text-align: center;
+  box-sizing: border-box;
+  color: black;
+}
+
+.totalPlayers p {
+  width: 50%;
+  float: left;
+
+}
+
+.PlayerInformation {
+  width: 100%;
+}
+
+.SIBreak {
+
+}
+
+.DPspacer {
+  float: right;
+  width: 40%;
+}
+
+.phoneNumber {
+  float: right;
+  width: 40%;
+}
+
 .miles {
   float: right;
   width: 40%;
@@ -19,6 +111,11 @@ body {
 #userLocation {
   visibility: hidden;
   display: none;
+}
+
+.SIBreak {
+  width: 100%;
+
 }
 
 .address {
@@ -38,16 +135,20 @@ body {
 
 .SIHeader {
   width: 100%;
-  position: relative;
+  height: 50%;
   top: 0;
+  padding-top: 5px;
+  box-sizing: border-box;
 }
 
 .GSSIlogoBox {
   max-height: 100px;
   max-width: 100px;
-  height: 25%;
+  height: 100%;
   width: 25%;
   float: left;
+  padding-left: 5px;
+  box-sizing: border-box;
 }
 
 .GSSIlogo {

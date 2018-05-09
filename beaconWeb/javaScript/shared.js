@@ -1,4 +1,21 @@
 var gameStore = [];
+var players = [];
+
+function bubbleSortPlayers(a)
+{
+    var swapped;
+    do {
+        swapped = false;
+        for (var i=0; i < a.length-1; i++) {
+            if (a[i].amount < a[i+1].amount) {
+                var temp = a[i];
+                a[i] = a[i+1];
+                a[i+1] = temp;
+                swapped = true;
+            }
+        }
+    } while (swapped);
+}
 
 function bubbleSort(a)
 {
@@ -25,4 +42,8 @@ function getDistance(user, store){
   dist = Math.floor(dist);
   dist /= 10;
   return dist;
+}
+
+function phoneNumberParser(number){
+  return '(' + number[0] + number[1] + number[2] + ') ' + number[3] + number[4] + number[5] + '-' + number[6] + number[7] + number[8] + number[9];
 }

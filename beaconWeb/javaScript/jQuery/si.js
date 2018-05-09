@@ -1,6 +1,7 @@
 // This function creates the SI using jquery
 // Last updated - Mikian - 5/7/18
 
+
 function genSI(){
 
   google.maps.LatLng.prototype.distanceFrom = function(latlng) {
@@ -44,6 +45,7 @@ function genSI(){
         // Get local vars
         var storeName   = gameStore[i].gameStoreName;
         var description = gameStore[i].description;
+        var phone       = gameStore[i].phone;
         var logo        = gameStore[i].logo;
         var address1    = gameStore[i].street;
         var address2    = gameStore[i].city;
@@ -59,6 +61,13 @@ function genSI(){
         // Create header container
         $( '#store'+i ).append(
           '<div id=SIHeader' + i + ' class="SIHeader"></div>'
+        );
+        // Create a line
+        $( '#store'+i ).append(
+          '<div id=SIBreak' + i + ' class="SIBreak"><hr></div>'
+        );
+        $( '#store'+i ).append(
+          '<div id=PlayerInformation' + i + ' class="PlayerInformation"></div>'
         );
 
         // Create store name container
@@ -92,6 +101,92 @@ function genSI(){
         );
         // Attach nav link to address
         $('#address' + i).attr('href', navAddress);
+
+        $( "#headerInformation" + i ).append(
+          '<div id=DPspacer'+ i +' class="DPspacer"><br></div>'
+        );
+        $( "#headerInformation" + i ).append(
+          '<div id=phone'+ i +' class="phoneNumber"><p>'+ phoneNumberParser(phone) + ' </p></div>'
+        );
+
+        $( '#PlayerInformation'+i ).append(
+          '<div id=grid-container2' + i + ' class="gridcontainer2"></div>'
+        );
+
+        $( '#grid-container2'+ i  ).append(
+          '<div id=grid-container' + i + ' class="gridcontainer"></div>'
+        );
+
+        $( '#grid-container2'+ i ).append(
+          '<div class="grid-item2">Total Players: ' + players[i].playersTotal + '</div>'
+        );
+
+
+/*
+        $( '#PlayerInformation'+i ).append(
+          '<div id=totalPlayers' + i + ' class="totalPlayers"><p> Total Players: ' + players[i].playersTotal + '</p></div>'
+        );
+        $( '#PlayerInformation'+i ).append(
+          '<div id=events' + i + ' class="events"><p> Total Events: ' + players[i].playersTotal + '</p></div>'
+        );
+*/
+        var sortedArray = [];
+
+        sortedArray.push({name:'Magic',amount:players[i].playersMagic})
+        sortedArray.push({name:'Pokemon',amount:players[i].playersPokemon})
+        sortedArray.push({name:'Yugioh',amount:players[i].playersYugioh})
+        sortedArray.push({name:'DND',amount:players[i].playersDND})
+        sortedArray.push({name:'Warhammer',amount:players[i].playersWarhammer})
+        bubbleSortPlayers(sortedArray);
+        console.table(sortedArray)
+
+
+
+
+        if(players[i].playersTotal > 0){
+          for(var j = 0; j < sortedArray.length; j++){
+            if(sortedArray[j].amount > 0){
+              $( '#grid-container'+ i ).append(
+                '<div class="grid-item">' + sortedArray[j].name + ' Players: ' + sortedArray[j].amount + '</div>'
+              );
+            }
+          }
+          if(players[i].playersOther > 0){
+            $( '#grid-container'+ i ).append(
+              '<div class="grid-item"><strong>Other Players: ' + players[i].playersOther + '</div>'
+            );
+          }
+        } else {
+          $( '#PlayerInformation'+ i ).append(
+            '<p class="grid-item message"> No one is here. Don\'t forget to check in! </p>'
+          );
+        }
+
+          $( '.PlayerInformation').hover(
+            function() {
+              $(this).find( '.totalPlayers' ).css('background-color', 'rgba(102,252,241,0.75)');
+              $(this).find( '.gridcontainer' ).show();
+              $(this).find( '.message' ).show();
+
+            }, function(){
+              $(this).find( '.totalPlayers' ).css('background-color', 'transparent');
+              $(this).find( '.gridcontainer' ).hide();
+              $(this).find( '.message' ).hide();
+
+            }
+          );
+
+
+
+          /*<div class="grid-item">1</div>*/
+
       } // Close for loop
+      $( '.gridcontainer' ).hide()
+      $( '.message' ).hide()
   }) // Close callback
+
+
+
+
+
 } // Close genSI

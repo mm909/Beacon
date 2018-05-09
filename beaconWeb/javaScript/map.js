@@ -64,9 +64,7 @@ function initMap(){
          infoWindow.open(map);
        }
 
-  // Get the list of markers (game stores) from our database
-  var _markers = _receiveINFO();
-  gameStore = _markers;
+
 
   // Parse information from that huge json object
   // We are preping the data to make marker objects
@@ -76,8 +74,8 @@ function initMap(){
       // Create the marker object
     tempMarker = {
       coords:{
-        lat:parseFloat(_markers[i].latitude),
-        lng:parseFloat(_markers[i].longitude)
+        lat:parseFloat(gameStore[i].latitude),
+        lng:parseFloat(gameStore[i].longitude)
       }
     }
 

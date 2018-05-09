@@ -1,3 +1,29 @@
+CREATE TABLE gameStoreInfo (
+    EVENTID int PRIMARY KEY NOT null AUTO_INCREMENT,
+    GSID int,
+    gameStoreName varchar(255),
+    eventname text,
+    description text,
+    prizes text,
+    eventDateTime datetime,
+    eventFee double,
+    expectedPlayers int
+);
+
+INSERT INTO `eventinfo`(`GSID`, `gameStoreName`, `eventname`, `description`, `prizes`, `eventDateTime`, `eventFee`, `expectedPlayers`)
+VALUES (1,"Darkside Games","Friday Night Magic","Come play Modern and Standard magic tonight!","Top four win cash!", '2018-05-08 18:00:00', 5.00, 10)
+
+INSERT INTO `eventinfo`(`GSID`, `gameStoreName`, `eventname`, `description`, `prizes`, `eventDateTime`, `eventFee`, `expectedPlayers`)
+VALUES (2,"Little Shop of Magic","Tuesday Night Magic","Come play magic tonight!","Top eight win cash!", '2018-05-10 14:00:00', 8.00, 8)
+
+INSERT INTO `eventinfo`(`GSID`, `gameStoreName`, `eventname`, `description`, `prizes`, `eventDateTime`, `eventFee`, `expectedPlayers`)
+VALUES (3,"TCG Junkie","Monday Night Magic","Come play magic today!","Everyone wins cash!", '2018-05-24 12:00:00', 8.50, 15)
+
+INSERT INTO `eventinfo`(`GSID`, `gameStoreName`, `eventname`, `description`, `prizes`, `eventDateTime`, `eventFee`, `expectedPlayers`)
+VALUES (1,"Darkside Games","Family Board Game Night!","Bring the family to play some board games!","Family Fun!", '2018-06-01 15:30:00', 0.00, 7)
+
+INSERT INTO `eventinfo`(`GSID`, `gameStoreName`, `eventname`, `description`, `prizes`, `eventDateTime`, `eventFee`, `expectedPlayers`)
+VALUES (1,"Darkside Games","Pokemon Showdown!","Come play some pokemon!","In store cash", '2018-06-20 11:30:00', 100.00, 70)
 
 CREATE TABLE currentPlayerInfo (
     GSID int PRIMARY KEY NOT null AUTO_INCREMENT,
