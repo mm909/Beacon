@@ -69,7 +69,7 @@ function initMap(){
   // Parse information from that huge json object
   // We are preping the data to make marker objects
   var tempMarker = null;
-  for(var i = 0; i < _markers.length; i++){
+  for(var i = 0; i < gameStore.length; i++){
 
       // Create the marker object
     tempMarker = {

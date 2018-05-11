@@ -4,7 +4,7 @@
 include 'CONNECT.php';
 
 // Form the SQL query
-$sql = "SELECT * FROM currentplayerinfo;";
+$sql = "SELECT * FROM eventinfo;";
 
 // query and store the results
 $result = mysqli_query($conn, $sql);

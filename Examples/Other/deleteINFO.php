@@ -23,3 +23,21 @@ echo "DONE";
 echo  "<br><br>" ;
 */
 ?>
+
+function _deleteINFO(lat, lng){
+  // Create the request
+  xmlhttp = new XMLHttpRequest();
+
+  // Form the request
+  // Use the GET method
+  // Call the deleteINFO.php script
+  // Pass some vars
+  // sync
+  xmlhttp.open("GET","databaseHandlers/deleteINFO.php?"
+  +"&lat="+lat
+  +"&lng="+lng
+  ,true);
+
+  // Sent the request
+  xmlhttp.send();
+}

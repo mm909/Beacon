@@ -129,7 +129,6 @@ function genSI(){
         sortedArray.push({name:'DND',amount:players[i].playersDND})
         sortedArray.push({name:'Warhammer',amount:players[i].playersWarhammer})
         bubbleSortPlayers(sortedArray);
-        console.table(sortedArray)
 
         if(players[i].playersTotal > 0){
           for(var j = 0; j < sortedArray.length; j++){
