@@ -11,6 +11,7 @@
 // https://www.apachefriends.org/index.html
 // localhost/myPHPadmin
 // ^ is how you can access and manage your database
+// This is our access file
 
 $servername = "localhost";
 $username = "root";
