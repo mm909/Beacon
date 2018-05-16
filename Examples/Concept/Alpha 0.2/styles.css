@@ -7,6 +7,7 @@
   margin: 0px;
   font-size: 22px;
   text-decoration: underline;
+  display:none;
 }
 
 .overlay {
@@ -55,12 +56,9 @@
     font-size: 60px;
 }
 
-@media screen and (max-height: 450px) {
+@media screen and (max-width: 767px) {
   .overlay {overflow-y: auto;}
-  .overlay a {font-size: 20px}
-  .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
+  .navbar-title {
+    display: block;
   }
 }
