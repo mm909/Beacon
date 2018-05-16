@@ -19,12 +19,12 @@ CREATE TABLE beacons (
     game text,
     description text,
     flags text,
-    
+
     Player1phone text
 );
 
 
-CREATE TABLE gameStoreInfo (
+CREATE TABLE eventinfo (
     EVENTID int PRIMARY KEY NOT null AUTO_INCREMENT,
     GSID int,
     gameStoreName varchar(255),
