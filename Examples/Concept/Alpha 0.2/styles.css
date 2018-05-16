@@ -5,6 +5,8 @@
 .navbar-title {
   color: white;
   margin: 0px;
+  font-size: 22px;
+  text-decoration: underline;
 }
 
 .overlay {
