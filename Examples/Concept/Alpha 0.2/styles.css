@@ -2,6 +2,11 @@
   padding-right: 5px;
 }
 
+.navbar-title {
+  color: white;
+  margin: 0px;
+}
+
 .overlay {
     height: 0%;
     width: 100%;
@@ -10,17 +15,22 @@
     top: 0;
     left: 0;
     background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.9);
+    background-color: rgba(0,0,0, 0.82);
     overflow-y: hidden;
     transition: 0.5s;
 }
 
 .overlay-content {
     position: relative;
-    top: 25%;
+    top: 5%;
     width: 100%;
     text-align: center;
     margin-top: 30px;
+}
+
+.overlay-break {
+  width: 80%;
+  background-color: white;
 }
 
 .overlay a {

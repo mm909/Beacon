@@ -9,4 +9,5 @@ function Nav() {
     document.getElementById("myNav").style.height = "100%";
     nav = true;
   }
+  console.log(nav)
 }
