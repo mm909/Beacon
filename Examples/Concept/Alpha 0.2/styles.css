@@ -148,17 +148,6 @@ html {
   }
 }
 
-@media screen and (max-width: 376px min-height:811) {
-  .overlay {overflow-y: auto;}
-  .navbar-title {
-    display: block;
-  }
-  .Map {
-    height: 700px;
-    max-height: 700px;
-    min-height: 309px;
-  }
-}
 
 /* iphone 6/7/8 plus */
 @media screen and (max-width: 415px) {
@@ -215,3 +204,26 @@ html {
     max-height: 509px;
   }
 }
+
+/* X */
+@media only screen
+    and (device-width : 375px)
+    and (device-height : 812px)
+    and (-webkit-device-pixel-ratio : 3) {
+      .overlay {overflow-y: auto;}
+      .navbar-title {
+        display: block;
+      }
+      .Map {
+        height: 694px;
+        max-height: 694px;
+        min-height: 347px;
+      }
+      .si {
+        min-height: 231px;
+        max-height: 231px;
+      }
+      .pageContent {
+        max-height: 753px;
+      }
+    }
