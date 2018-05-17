@@ -27,7 +27,6 @@ function initMap(){
            };
            map.setCenter(pos);
 
-           var image = '../images/logos/beaconLogo.png';
 
            tempMarker = {
              coords:{
@@ -37,7 +36,8 @@ function initMap(){
            }
 
            var icon = {
-               url:  '../../../images/logos/beaconLogo.png',
+               url:  '../images/logos/beaconLogo.png',
+
                scaledSize: new google.maps.Size(50, 50), // scaled size
            };
 

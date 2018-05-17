@@ -125,7 +125,6 @@ html {
     transition: 0.3s;
 }
 
-
 /* desktop */
 @media screen and (min-width: 500px) {
   .overlay {overflow-y: auto;}
