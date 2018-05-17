@@ -2,27 +2,44 @@ html {
   background-color: #cccccc;
 }
 
+.pageContent {
+  background-color: #888888;
+  min-height: 206px;
+  max-height: 677px;
+  overflow: scroll;
+  color: white;
+  text-align: center;
+}
+
 .si {
-  background-color: #66fcf1;
+  background-color: #0b0c10;
+  min-height: 206px;
+  max-height: 206px;
+  display: none;
+  overflow: scroll;
 }
 .si p {
   padding: 0px;
   margin: 0px;
+  color: white;
 }
 
 .tableStores {
   display: none;
-  min-height: 309px;
+  height: 100%;
+  min-width: 100%;
 }
 
 .tableBeacons {
   display: none;
-  min-height: 309px;
+  min-height: 100%;
+  min-width: 100%;
 }
 
 .tableEvents {
   display: none;
-  min-height: 309px;
+  min-height: 100%;
+  min-width: 100%;
 }
 
 .footer {
