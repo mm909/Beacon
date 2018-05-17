@@ -1,315 +1,228 @@
 html {
-  height:100%;
-  margin: 0;
+  background-color: #cccccc;
   overflow: hidden;
 }
 
-body {
-  background-color: #c5c6c7;
-  height: 92%;
-  margin: 0;
-}
-
-.message {
-  color: red;
-  text-align: center;
-}
-
-.gridcontainer2 {
-  display: grid;
-  grid-template-columns: auto;
-  background-color: rgba(31,40,51,0.2);
-  color: black;
-  padding: 0px;
-  margin: 0px;
-
-}
-
-.grid-item2 {
-  text-align: center;
-}
-
-
-.gridcontainer {
-  display: grid;
-  grid-template-columns: auto auto;
-  background-color: rgba(31,40,51,0.2);
-  color: black;
-}
-
-.grid-item {
-  text-align: center;
-}
-
-.catPlayers {
-  min-width: 33%;
-  min-height: 50%;
-  display: inline-grid;
-  box-sizing: border-box;
-  padding: 0px;
-}
-
-.catPlayers p {
-  padding: 0px;
-  margin: 0px;
-  width: 100%;
-  text-align: center;
-}
-
-.events {
-  width: 50%;
-  text-align: center;
-  padding-left: 5px;
-  box-sizing: border-box;
-  color: black;
-  display: inline;
-}
-
-.events p {
-  width: 50%;
-  float: right;
-}
-
-.totalPlayers {
-  width: 50%;
-  display: inline;
-  text-align: center;
-  box-sizing: border-box;
-  color: black;
-}
-
-.totalPlayers p {
-  width: 50%;
-  float: left;
-
-}
-
-.PlayerInformation {
-  width: 100%;
-}
-
-.SIBreak {
-
-}
-
-.DPspacer {
-  float: right;
-  width: 40%;
-}
-
-.phoneNumber {
-  float: right;
-  width: 40%;
-}
-
-.miles {
-  float: right;
-  width: 40%;
-  color: black;
-}
-
-#userLocation {
-  visibility: hidden;
-  display: none;
-}
-
-.SIBreak {
-  width: 100%;
-
-}
-
-.address {
-  float: left;
-  max-width: 60%;
-}
-
-.headerInformation a {
-  color: black;
-}
-
-.headerInformation {
-  width: 75%;
-  float: right;
-  text-align: center;
-}
-
-.SIHeader {
-  width: 100%;
-  height: 50%;
-  top: 0;
-  padding-top: 5px;
-  box-sizing: border-box;
-}
-
-.GSSIlogoBox {
-  max-height: 100px;
-  max-width: 100px;
-  height: 100%;
-  width: 25%;
-  float: left;
-  padding-left: 5px;
-  box-sizing: border-box;
-}
-
-.GSSIlogo {
-  height: 100%;
-  width: 100%;
-}
-
-.storeName {
-  width: 75% ;
-  float: right;
-}
-
-.storeName .gameStoreName {
-  font-size:26px;
-  text-align: center;
-  color: black;
-}
-
-
-#container-tab {
-  height: 100%;
-  width: 20%;
-  float: right;
-
-}
-
-#container-tab1 {
-  width: 100%;
-  height: 100%;
-  color: white;
-  overflow: hidden;
-}
-
-#container-tab1 .content {
-  background-color: #c5c6c7;
-  width: 100%;
-  height: 100%;
-  padding-right: 15px;
-  padding-left: 8px;
+.pageContent {
+  background-color: #888888;
+  max-height: 677px;
   overflow: scroll;
+  color: white;
+  text-align: center;
+}
+
+.si {
+  background-color: rgba(0,0,0, 0.9);
+  min-height: 206px;
+  max-height: 206px;
+  display: none;
+  overflow: auto;
   overflow-x: hidden;
 }
 
-#container-tab1 * {
+.si p {
+  padding: 0px;
   margin: 0px;
+  color: white;
 }
 
-.tab {
-  height:25%;
-  min-height: 200px;
+.tableStores {
+  display: none;
+  height: 100%;
+  min-width: 100%;
+}
+
+.tableBeacons {
+  display: none;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.tableEvents {
+  display: none;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.footer {
+  background-color: black;
   width: 100%;
-  background-color: #ffbf84;
-  border: 1px;
-  border-style: solid;
-}
-
-/*     */
-.logoContainer{
-  display: inline-block;
+  height: 59px;
+  transition: 0.5s;
+  position: fixed;
   bottom: 0;
-  position: relative;
-  height: 36px;
-  width: 36px;
 }
 
-.logo {
-  height: 36px;
-  width: 36px;
+.btn-group {
+  width:100%;
 }
 
-.settingsContainer {
-  height:36px;
-  float: right;
-}
-
-#threeLines {
-  height: 36px;
-  width: 36px;
+.btn {
+  width: 34%;
+  height: 59px;
+  box-sizing: border-box;
   padding: 0;
-  margin: 0;
+  display: inline-block;
+  line-height: 59px;
+  text-align: center;
 }
 
 .Map {
   width: 100%;
-  height: 100%;
   margin: 0px;
+  min-height: 300px;
+  transition: 0.5s;
 }
 
-.option {
-  display: inline-block;
-  margin: auto;
+.nav-icon {
+  padding-right: 5px;
 }
 
-.header{
-  height: auto;
-	background-color:#1f2833;
+.navbar-title {
+  color: white;
+  margin: 0px;
+  font-size: 21px;
+  text-decoration: underline;
+  display:none;
 }
 
-.header a {
-  color:#66fcf1;
-  text-decoration: none;
-  font-size:32px;
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.915);
+    overflow-y: hidden;
+    transition: 0.5s;
 }
 
-.container {
-  width:80%;
-	margin:auto;
-	overflow:hidden;
+.navbar {
+  z-index: 2;
 }
 
-.container-map {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  background-color: #1f2833;
+.overlay-content {
+    position: relative;
+    top: 5%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
 }
 
-.nav {
-  text-align: justify;
-  background-color: #c5c6c7
+.overlay-break {
+  width: 80%;
+  background-color: white;
 }
 
-.nav ul {
-	padding:0;
-  margin: 0;
-	list-style: none;
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
 }
 
-.nav li {
-	display:inline;.
+/* desktop */
+@media screen and (min-width: 500px) {
+  .overlay {overflow-y: auto;}
+  .navbar-title {
+    display: hidden;
+  }
+  .Map {
+    height: 810px;
+    max-height: 810px;
+    min-height: 405px;
+  }
+  .si {
+    min-height: 271px;
+    max-height: 271px;
+  }
+  .pageContent {
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-height: 870px;
+  }
 }
 
-.nav li a:hover {
-    background-color: #66fcf1;
-    color: #000000;
+
+/* iphone 6/7/8 plus */
+@media screen and (max-width: 415px) {
+  .overlay {overflow-y: auto;}
+  .navbar-title {
+    display: block;
+  }
+  .Map {
+    height: 618px;
+    max-height: 618px;
+    min-height: 309px;
+  }
 }
 
-.nav a {
-  color:#ffffff;
-  text-decoration: none;
-  font-size:18px;
-  padding-right:5px;
-  padding-left:5px;
+/* iphone 6/7/8 */
+@media screen and (max-width: 376px) {
+  .overlay {overflow-y: auto;}
+  .navbar-title {
+    display: block;
+  }
+  .Map {
+    height: 550px;
+    max-height: 550px;
+    min-height: 275px;
+  }
+  .si {
+    min-height: 182px;
+    max-height: 182px;
+  }
+  .pageContent {
+    max-height: 608px;
+  }
 }
 
+/* iphone 5/SE */
+@media screen and (max-width: 321px) {
+  .overlay {overflow-y: auto;}
+  .navbar-title {
+    display: block;
+  }
+  .Map {
+    height: 450px;
+    max-height: 450px;
+    min-height: 225px;
+  }
+  .si {
+    min-height: 150px;
+    max-height: 150px;
+  }
+  .overlay a {
+      font-size: 30px;
+  }
+  .pageContent {
+    max-height: 509px;
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**/
+/* X */
+@media only screen
+    and (device-width : 375px)
+    and (device-height : 812px)
+    and (-webkit-device-pixel-ratio : 3) {
+      .overlay {overflow-y: auto;}
+      .navbar-title {
+        display: block;
+      }
+      .Map {
+        height: 694px;
+        max-height: 694px;
+        min-height: 347px;
+      }
+      .si {
+        min-height: 231px;
+        max-height: 231px;
+      }
+      .pageContent {
+        max-height: 753px;
+      }
+    }
