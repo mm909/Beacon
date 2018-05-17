@@ -91,6 +91,4 @@ function initMap(){
     });
   }
 
-  // Call the function to create the summary tables
-  genSI();
 }
