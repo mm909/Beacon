@@ -5,7 +5,6 @@ html {
 
 .pageContent {
   background-color: #888888;
-  min-height: 206px;
   max-height: 677px;
   overflow: scroll;
   color: white;
@@ -126,48 +125,9 @@ html {
     transition: 0.3s;
 }
 
-.overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
-}
-
-.overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
-}
-
-
-/* iphone 6/7/8 plus */
-@media screen and (max-width: 736px) {
-  .overlay {overflow-y: auto;}
-  .navbar-title {
-    display: block;
-  }
-  .Map {
-    height: 618px;
-    max-height: 618px;
-    min-height: 309px;
-
-  }
-}
-
-/* iphone 6/7/8 */
-@media screen and (max-width: 668px) {
-  .overlay {overflow-y: auto;}
-  .navbar-title {
-    display: block;
-  }
-  .Map {
-    height: 550px;
-    max-height: 550px;
-    min-height: 275px;
-
-  }
-}
 
 /* desktop */
-@media screen and (min-width: 736px) {
+@media screen and (min-width: 500px) {
   .overlay {overflow-y: auto;}
   .navbar-title {
     display: hidden;
@@ -177,16 +137,81 @@ html {
     max-height: 810px;
     min-height: 405px;
   }
-
   .si {
     min-height: 271px;
     max-height: 271px;
   }
-
   .pageContent {
     overflow-x: hidden;
     overflow-y: auto;
     min-height: 870px;
   }
+}
 
+@media screen and (max-width: 376px min-height:811) {
+  .overlay {overflow-y: auto;}
+  .navbar-title {
+    display: block;
+  }
+  .Map {
+    height: 700px;
+    max-height: 700px;
+    min-height: 309px;
+  }
+}
+
+/* iphone 6/7/8 plus */
+@media screen and (max-width: 415px) {
+  .overlay {overflow-y: auto;}
+  .navbar-title {
+    display: block;
+  }
+  .Map {
+    height: 618px;
+    max-height: 618px;
+    min-height: 309px;
+  }
+}
+
+/* iphone 6/7/8 */
+@media screen and (max-width: 376px) {
+  .overlay {overflow-y: auto;}
+  .navbar-title {
+    display: block;
+  }
+  .Map {
+    height: 550px;
+    max-height: 550px;
+    min-height: 275px;
+  }
+  .si {
+    min-height: 182px;
+    max-height: 182px;
+  }
+  .pageContent {
+    max-height: 608px;
+  }
+}
+
+/* iphone 5/SE */
+@media screen and (max-width: 321px) {
+  .overlay {overflow-y: auto;}
+  .navbar-title {
+    display: block;
+  }
+  .Map {
+    height: 450px;
+    max-height: 450px;
+    min-height: 225px;
+  }
+  .si {
+    min-height: 150px;
+    max-height: 150px;
+  }
+  .overlay a {
+      font-size: 30px;
+  }
+  .pageContent {
+    max-height: 509px;
+  }
 }
