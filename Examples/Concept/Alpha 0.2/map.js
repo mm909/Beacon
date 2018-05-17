@@ -16,7 +16,6 @@ function initMap(){
 
   // Make a new map with those options and place it in <div id="map"></div>
   var map = new google.maps.Map(document.getElementById('map'), options);
-  console.log(map)
   var infoWindow = new google.maps.InfoWindow;
 
   if (navigator.geolocation) {

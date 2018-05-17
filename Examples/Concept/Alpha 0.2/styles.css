@@ -1,5 +1,6 @@
 html {
   background-color: #cccccc;
+  overflow: hidden;
 }
 
 .pageContent {
@@ -16,7 +17,8 @@ html {
   min-height: 206px;
   max-height: 206px;
   display: none;
-  overflow: scroll;
+  overflow: auto;
+  overflow-x: hidden;
 }
 .si p {
   padding: 0px;
@@ -157,4 +159,11 @@ html {
     max-height: 810px;
     min-height: 405px;
   }
+
+  .si {
+    min-height: 271px;
+    max-height: 271px;
+  }
+
+
 }
