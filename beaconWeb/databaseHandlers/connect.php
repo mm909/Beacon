@@ -13,10 +13,10 @@
 // ^ is how you can access and manage your database
 // This is our access file
 
-$servername = "web1326.ixwebhosting.com";
-$username = "mm909";
-$password = "Unlv2018";
-$database = "brcamer_becaon";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "beacon-alpha";
 
 // Note that $database is the data base name on the left hand side of
 // myPHPadmin and not the table name

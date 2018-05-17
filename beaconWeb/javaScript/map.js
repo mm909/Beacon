@@ -37,7 +37,7 @@ function initMap(){
            }
 
            var icon = {
-               url:  '../images/logos/beaconLogo.png',
+               url:  '../../../images/logos/beaconLogo.png',
                scaledSize: new google.maps.Size(50, 50), // scaled size
            };
 
@@ -91,6 +91,4 @@ function initMap(){
     });
   }
 
-  // Call the function to create the summary tables
-  genSI();
 }
