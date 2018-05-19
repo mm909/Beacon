@@ -19,7 +19,7 @@ function handleSetCenterButtonClicked(id) {
   var latLng = new google.maps.LatLng(coords.lat, coords.lng);
   console.log(coords)
   map.setCenter(latLng);
-  map.setZoom(10.2);
+  map.setZoom(13);
 }
 
 function bubbleSortPlayers(a)
