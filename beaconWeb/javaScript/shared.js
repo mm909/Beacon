@@ -21,24 +21,70 @@ function bubbleSortPlayers(a)
             }
         }
     } while (swapped);
-    return true;
 }
 
-function bubbleSort(a)
+function bubbleSort(a,sort)
 {
-    var swapped;
-    do {
-        swapped = false;
-        for (var i=0; i < a.length-1; i++) {
-            if (a[i].distance > a[i+1].distance) {
-                var temp = a[i];
-                a[i] = a[i+1];
-                a[i+1] = temp;
-                swapped = true;
-            }
-        }
-    } while (swapped);
-    return true;
+    if(sort == "Distance"){
+      var swapped;
+      do {
+          swapped = false;
+          for (var i=0; i < a.length-1; i++) {
+              if (a[i].distance > a[i+1].distance) {
+                  var temp = a[i];
+                  a[i] = a[i+1];
+                  a[i+1] = temp;
+                  swapped = true;
+              }
+          }
+      } while (swapped);
+    }
+
+    if(sort == "Players"){
+      var swapped;
+      do {
+          swapped = false;
+          for (var i=0; i < a.length-1; i++) {
+              if (parseInt(a[i].playersTotal) < parseInt(a[i+1].playersTotal)) {
+                  var temp = a[i];
+                  a[i] = a[i+1];
+                  a[i+1] = temp;
+                  swapped = true;
+              }
+          }
+      } while (swapped);
+    }
+
+    if(sort == "Beacons"){
+      var swapped;
+      do {
+          swapped = false;
+          for (var i=0; i < a.length-1; i++) {
+              if (parseInt(a[i].beaconsTotal) < parseInt(a[i+1].beaconsTotal)) {
+                  var temp = a[i];
+                  a[i] = a[i+1];
+                  a[i+1] = temp;
+                  swapped = true;
+              }
+          }
+      } while (swapped);
+    }
+
+    if(sort == "Events"){
+      var swapped;
+      do {
+          swapped = false;
+          for (var i=0; i < a.length-1; i++) {
+              if (parseInt(a[i].eventsTotal) < parseInt(a[i+1].eventsTotal)) {
+                  var temp = a[i];
+                  a[i] = a[i+1];
+                  a[i+1] = temp;
+                  swapped = true;
+              }
+          }
+      } while (swapped);
+    }
+
 }
 
 function getDistance(user, store){

@@ -27,7 +27,7 @@ function buildSI(){
         var user = new google.maps.LatLng(userPos.lat, userPos.lng);
         var store = new google.maps.LatLng(storePos.lat, storePos.lng);
         gameStore[i].distance = getDistance(user, store);
-        
+
         gameStore[i].beaconsTotal = 0;
         gameStore[i].eventsTotal = 0;
         gameStore[i].playersTotal = 0;
@@ -60,7 +60,10 @@ function buildSI(){
         }
       }
 
-      bubbleSort(gameStore)
+      console.log("before sort")
+      console.table(gameStore)
+      console.log($( "#storeSorter" ).val());
+      bubbleSort(gameStore, $( "#storeSorter" ).val())
 
       /*
       <div class="siItem">
