@@ -3,6 +3,10 @@ html {
   overflow: hidden;
 }
 
+.wraper {
+  display: grid;
+}
+
 .pageContent {
   background-color: #888888;
   max-height: 677px;
