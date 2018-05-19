@@ -28,6 +28,7 @@ function buildSI(){
         var store = new google.maps.LatLng(storePos.lat, storePos.lng);
         gameStore[i].distance = getDistance(user, store);
         gameStore[i].beaconsTotal = 0;
+        gameStore[i].eventsTotal = 0;
       }
 
       /* Get the total number of players at the store */
@@ -42,6 +43,17 @@ function buildSI(){
         for(var k = 0; k < gameStore.length; k++){
           if(beaconGSID == gameStore[k].GSID){
             gameStore[k].beaconsTotal++;
+          }
+        }
+      }
+
+      /* Get the total number of events at store */
+      /* NOTE: This alg could be improved */
+      for(var j = 0; j < events.length; j++){
+        var eventGSID = events[j].GSID;
+        for(var k = 0; k < gameStore.length; k++){
+          if(eventGSID == gameStore[k].GSID){
+            gameStore[k].eventsTotal++;
           }
         }
       }
@@ -127,7 +139,7 @@ function buildSI(){
                     $( "#exampleGameStoreButtonContainer" + i ).append($siStoreButton2)
 
                     /* Create Button*/
-                    $siStoreButton3 = $( "<a href='#' onclick='' class='btn btn-dark'>Events: x</a>" )
+                    $siStoreButton3 = $( "<a href='#' onclick='' class='btn btn-dark'>Events: " + gameStore[i].eventsTotal + "</a>" )
                     $( "#exampleGameStoreButtonContainer" + i ).append($siStoreButton3)
 
             /* Create Button Break */
@@ -138,6 +150,5 @@ function buildSI(){
             $siStorePhone = $( "<p class='phone'>702-540-4190</p>")
             $( "#exampleGameStoreCard" + i ).append($siStorePhone)
       }
-
   });
 }
