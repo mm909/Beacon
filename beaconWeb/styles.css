@@ -3,6 +3,67 @@ html {
   overflow: hidden;
 }
 
+.buttonBreak {
+  background-color: white;
+  width: 95%;
+  margin: auto;
+  margin-top: 6px;
+}
+
+.siButtons {
+  padding-top: 4px;
+  padding-bottom: 2px;
+  width:95%;
+  margin: auto;
+}
+
+.phone {
+  font-size: 16px;
+}
+
+.headerBreak {
+  background-color: white;
+  width: 95%;
+  margin-bottom: 2px;
+}
+
+.si-Store-Header {
+  display: block
+  width: 95%;
+  margin: auto;
+  min-height: 52px;
+  margin-top: 5px;
+}
+
+.si-Store-Header .storeName {
+  color: White;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.si-Store-Header hr {
+  padding: 0px;
+  margin: auto;
+  width: 95%;
+  background-color: white;
+}
+
+.si-Store-Header .directions {
+  display: inline-block;
+  width: 50%;
+  font-size: 18px;
+  float: left;
+  text-decoration: underline;
+  color: white;
+}
+
+.si-Store-Header .distance {
+  display: inline-block;
+  width: 50%;
+  font-size: 18px;
+  float: right;
+}
+
 .wraper {
   display: flex;
   flex-wrap: wrap;
@@ -10,12 +71,11 @@ html {
 
 .siItem {
     width: 80%;
+    min-height: 75px;
     max-width: 332px;
     margin: auto;
     margin-top: 5px;
     text-align: center;
-    line-height: 75px;
-    font-size: 30px;
     background-color: #999999;
 }
 
@@ -194,6 +254,12 @@ html {
   .pageContent {
     max-height: 608px;
   }
+  .si-Store-Header .directions  {
+    width:40%;
+  }
+  .si-Store-Header .distance  {
+    width:60%;
+  }
 }
 
 /* iphone 5/SE */
@@ -216,6 +282,15 @@ html {
   }
   .pageContent {
     max-height: 509px;
+  }
+  .si-Store-Header .directions  {
+    font-size: 16px;
+  }
+  .si-Store-Header .distance  {
+    font-size: 16px;
+  }
+  .si-Store-Header {
+    min-height: 45px;
   }
 }
 
