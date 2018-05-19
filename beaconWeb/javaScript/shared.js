@@ -20,6 +20,7 @@ function bubbleSortPlayers(a)
             }
         }
     } while (swapped);
+    return true;
 }
 
 function bubbleSort(a)
@@ -36,6 +37,7 @@ function bubbleSort(a)
             }
         }
     } while (swapped);
+    return true;
 }
 
 function getDistance(user, store){
