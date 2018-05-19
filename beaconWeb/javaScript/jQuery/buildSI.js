@@ -15,7 +15,6 @@ function buildSI(){
     return Math.round(d);
   }
 
-  var moveOn = false;
   /* Function to add distance to the gameStore object */
   navigator.geolocation.getCurrentPosition(function(position) {
       // Get user's posistion
@@ -28,6 +27,10 @@ function buildSI(){
         var user = new google.maps.LatLng(userPos.lat, userPos.lng);
         var store = new google.maps.LatLng(storePos.lat, storePos.lng);
         gameStore[i].distance = getDistance(user, store);
+      }
+
+      for(var j = 0; j < players.length; j++){
+        gameStore[j].playersTotal = players[j].playersTotal;
       }
 
       bubbleSort(gameStore)
@@ -55,11 +58,12 @@ function buildSI(){
 
       for(var i = 0; i < gameStore.length; i++){
 
-      var address1    = gameStore[i].street;
-      var address2    = gameStore[i].city;
-          address2   +=  ", " + gameStore[i].state;
-          address2   += " " + gameStore[i].zip;
-      var navAddress  = "https://www.google.com/maps/dir/?api=1&destination=" + address1 + address2;
+        /* Get address for nav link */
+        var address1    = gameStore[i].street;
+        var address2    = gameStore[i].city;
+            address2   +=  ", " + gameStore[i].state;
+            address2   += " " + gameStore[i].zip;
+        var navAddress  = "https://www.google.com/maps/dir/?api=1&destination=" + address1 + address2;
 
         /* Create the card */
         $siStoreCard = $( "<div class='siItem' id='exampleGameStoreCard" + i + "' ></div>" )
@@ -102,7 +106,7 @@ function buildSI(){
                 //--
 
                     /* Create Button*/
-                    $siStoreButton1 = $( "<a href='#' onclick='' class='btn btn-dark'>Players: x</a>" )
+                    $siStoreButton1 = $( "<a href='#' onclick='' class='btn btn-dark'>Players: " + gameStore[i].playersTotal + "</a>" )
                     $( "#exampleGameStoreButtonContainer" + i ).append($siStoreButton1)
 
                     /* Create Button*/
@@ -123,8 +127,4 @@ function buildSI(){
       }
 
   });
-
-
-
-
 }
