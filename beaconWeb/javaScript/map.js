@@ -91,4 +91,6 @@ function initMap(){
     });
   }
 
+  buildSI();
+
 }
