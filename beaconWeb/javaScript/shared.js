@@ -84,7 +84,6 @@ function bubbleSort(a,sort)
           }
       } while (swapped);
     }
-
 }
 
 function getDistance(user, store){
