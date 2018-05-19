@@ -3,6 +3,12 @@ html {
   overflow: hidden;
 }
 
+.sorter {
+  top: 0;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
 .buttonBreak {
   background-color: white;
   width: 95%;

@@ -27,8 +27,10 @@ function buildSI(){
         var user = new google.maps.LatLng(userPos.lat, userPos.lng);
         var store = new google.maps.LatLng(storePos.lat, storePos.lng);
         gameStore[i].distance = getDistance(user, store);
+        
         gameStore[i].beaconsTotal = 0;
         gameStore[i].eventsTotal = 0;
+        gameStore[i].playersTotal = 0;
       }
 
       /* Get the total number of players at the store */
