@@ -5,6 +5,7 @@ var gameStore = [];
  */
 var players = [];
 var events = [];
+var beacons = [];
 
 function bubbleSortPlayers(a)
 {
