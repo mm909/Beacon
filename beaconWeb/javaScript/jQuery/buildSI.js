@@ -191,6 +191,10 @@ function popluateSICards(){
             /* Create Store Name */
             $siStoreName = $( "<a id='exampleGameStoreName" + i + "' class='storeName' href='#'>" + gameStore[i].gameStoreName + "</a>")
             $( "#exampleGameStoreHeader" + i ).append($siStoreName)
+            $( "#exampleGameStoreName" + i ).click(function() {
+              console.log( "Handler for .click() called." );
+              handleSetCenterButtonClicked(this.id);
+            });
 
             /* Create Break */
             $siStoreBreak = $( "<hr>")

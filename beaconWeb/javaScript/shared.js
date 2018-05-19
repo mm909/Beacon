@@ -6,6 +6,20 @@ var gameStore = [];
 var players = [];
 var events = [];
 var beacons = [];
+var map;
+
+function handleSetCenterButtonClicked(id) {
+  console.log(id)
+  var index = id[id.length-1];
+  console.log(index)
+  coords = {
+             lat: parseFloat(gameStore[index].latitude),
+             lng: parseFloat(gameStore[index].longitude)
+           };
+  var latLng = new google.maps.LatLng(coords.lat, coords.lng);
+  console.log(coords)
+  map.setCenter(latLng);
+}
 
 function bubbleSortPlayers(a)
 {
