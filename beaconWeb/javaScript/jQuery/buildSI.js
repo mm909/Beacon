@@ -28,37 +28,9 @@ function buildSI(){
         var store = new google.maps.LatLng(storePos.lat, storePos.lng);
         gameStore[i].distance = getDistance(user, store);
 
-        gameStore[i].beaconsTotal = 0;
-        gameStore[i].eventsTotal = 0;
-        gameStore[i].playersTotal = 0;
       }
 
-      /* Get the total number of players at the store */
-      for(var j = 0; j < players.length; j++){
-        gameStore[j].playersTotal = players[j].playersTotal;
-      }
-
-      /* Get the total number of beacons at store */
-      /* NOTE: This alg could be improved */
-      for(var j = 0; j < beacons.length; j++){
-        var beaconGSID = beacons[j].GSID;
-        for(var k = 0; k < gameStore.length; k++){
-          if(beaconGSID == gameStore[k].GSID){
-            gameStore[k].beaconsTotal++;
-          }
-        }
-      }
-
-      /* Get the total number of events at store */
-      /* NOTE: This alg could be improved */
-      for(var j = 0; j < events.length; j++){
-        var eventGSID = events[j].GSID;
-        for(var k = 0; k < gameStore.length; k++){
-          if(eventGSID == gameStore[k].GSID){
-            gameStore[k].eventsTotal++;
-          }
-        }
-      }
+      updateCounts();
 
       /* Create the sorter */
       $siStoreSorter = $( "<select id='storeSorter' class='sorter'>" )
@@ -223,15 +195,15 @@ function popluateSICards(){
             //--
 
                 /* Create Button*/
-                $siStoreButton1 = $( "<a href='#' onclick='' class='btn btn-dark'>Players: " + gameStore[i].playersTotal + "</a>" )
+                $siStoreButton1 = $( "<a href='pages/stores/storePage.html?GSID=" + gameStore[i].GSID + "&DIST=" + gameStore[i].distance + "' onclick='' class='btn btn-dark'>Players: " + gameStore[i].playersTotal + "</a>" )
                 $( "#exampleGameStoreButtonContainer" + i ).append($siStoreButton1)
 
                 /* Create Button*/
-                $siStoreButton2 = $( "<a href='#' onclick='' class='btn btn-dark'>Beacons: " + gameStore[i].beaconsTotal + "</a>" )
+                $siStoreButton2 = $( "<a href='pages/stores/storePage.html?GSID=" + gameStore[i].GSID + "&DIST=" + gameStore[i].distance + "' onclick='' class='btn btn-dark'>Beacons: " + gameStore[i].beaconsTotal + "</a>" )
                 $( "#exampleGameStoreButtonContainer" + i ).append($siStoreButton2)
 
                 /* Create Button*/
-                $siStoreButton3 = $( "<a href='#' onclick='' class='btn btn-dark'>Events: " + gameStore[i].eventsTotal + "</a>" )
+                $siStoreButton3 = $( "<a href='pages/stores/storePage.html?GSID=" + gameStore[i].GSID + "&DIST=" + gameStore[i].distance + "' onclick='' class='btn btn-dark'>Events: " + gameStore[i].eventsTotal + "</a>" )
                 $( "#exampleGameStoreButtonContainer" + i ).append($siStoreButton3)
 
         /* Create Button Break */

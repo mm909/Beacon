@@ -1,12 +1,51 @@
-var gameStore = [];
-// Values in object
-/*
- *
- */
-var players = [];
-var events = [];
-var beacons = [];
+if(gameStore == null){
+  var gameStore = [];
+  // Values in object
+  /*
+   *
+   */
+  var players = [];
+  var events = [];
+  var beacons = [];
+}
+
 var map;
+
+function updateCounts(){
+
+  for(var i = 0; i < gameStore.length; i++){
+    gameStore[i].beaconsTotal = 0;
+    gameStore[i].eventsTotal = 0;
+    gameStore[i].playersTotal = 0;
+  }
+
+  /* Get the total number of players at the store */
+  for(var j = 0; j < players.length; j++){
+    gameStore[j].playersTotal = players[j].playersTotal;
+  }
+
+  /* Get the total number of beacons at store */
+  /* NOTE: This alg could be improved */
+  for(var j = 0; j < beacons.length; j++){
+    var beaconGSID = beacons[j].GSID;
+    for(var k = 0; k < gameStore.length; k++){
+      if(beaconGSID == gameStore[k].GSID){
+        gameStore[k].beaconsTotal++;
+      }
+    }
+  }
+
+  /* Get the total number of events at store */
+  /* NOTE: This alg could be improved */
+  for(var j = 0; j < events.length; j++){
+    var eventGSID = events[j].GSID;
+    for(var k = 0; k < gameStore.length; k++){
+      if(eventGSID == gameStore[k].GSID){
+        gameStore[k].eventsTotal++;
+      }
+    }
+  }
+}
 
 function handleSetCenterButtonClicked(id) {
   console.log(id)
@@ -101,17 +140,17 @@ function bubbleSort(a,sort)
     }
 }
 
-function getDistance(user, store){
-  // Use the google api to get the distance is meters
-  var dist = user.distanceFrom(store);
-  // Convert that to miles and round to the tenth
-  dist = dist/1000 * 0.621371;
-  dist *= 10;
-  dist = Math.floor(dist);
-  dist /= 10;
-  return dist;
-}
-
 function phoneNumberParser(number){
   return '(' + number[0] + number[1] + number[2] + ') ' + number[3] + number[4] + number[5] + '-' + number[6] + number[7] + number[8] + number[9];
+}
+
+function getParameterByName( name ){
+  name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+  var regexS = "[\\?&]"+name+"=([^&#]*)";
+  var regex = new RegExp( regexS );
+  var results = regex.exec( window.location.href );
+  if( results == null )
+    return "";
+  else
+    return decodeURIComponent(results[1].replace(/\+/g, " "));
 }
