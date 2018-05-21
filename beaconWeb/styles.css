@@ -3,6 +3,14 @@ html {
   overflow: hidden;
 }
 
+.storeSIBreak {
+  background-color: white;
+  width: 95%;
+  margin: 0px;
+  margin: auto;
+  margin-bottom: 2px;
+}
+
 .sorter {
   top: 0;
   width: 100%;
@@ -27,6 +35,7 @@ html {
 
 .phone {
   font-size: 16px;
+  margin: 0px;
 }
 
 .headerBreak {
