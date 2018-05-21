@@ -16,16 +16,15 @@
     <script language="javascript" type="text/javascript" src="javascript/jQuery/si.js"></script>
     <script language="javascript" type="text/javascript" src="javascript/jQuery/nav.js"></script>
     <script language="javascript" type="text/javascript" src="javascript/map.js"></script>
+    <script language="javascript" type="text/javascript" src="javascript/jQuery/buildSI.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlx94CvcdTa_9PQ2Qgeig2aHPpL2lMsU0&callback=initMap"></script>
-
-    </script>
   </head>
 
   <body>
     <div id="myNav" class="overlay">
       <div class="overlay-content">
         <a onclick="Nav()" href="#">Map</a>
-        <a href="pages/stores.html">Stores</a>
+        <a href="pages/stores.html?FLAG=1">Stores</a>
         <a href="pages/beacons.html">Beacons</a>
         <a href="pages/events.html">Events</a>
         <hr class="overlay-break">
@@ -52,7 +51,7 @@
             <a class="nav-link" href="#">Map <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/stores.html">Stores</a>
+            <a class="nav-link" href="pages/stores.html?FLAG=1">Stores</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="pages/beacons.html">Beacons</a>
@@ -77,52 +76,60 @@
     <div class="Map" id="map"></div>
 
     <div class="si">
-      <div class="tableStores">
-        <p>Testing Stores</p>
-        <p>Testing Stores</p>
-        <p>Testing Stores</p>
-        <p>Testing Stores</p>
-        <p>Testing Stores</p>
-        <p>Testing Stores</p>
-        <p>Testing Stores</p>
-        <p>Testing Stores</p>
-        <p>Testing Stores</p>
-        <p>Testing Stores</p>
-        <p>Testing Stores</p>
-        <p>Testing Stores</p>
-        <p>Testing Stores</p>
-        <p>Testing Stores</p>
-        <p>Testing Stores</p>
-        <p>Testing Stores</p>
-        <p>Testing Stores End</p>
+      <div class="tableStores wraper">
+        <!-- Content Filled in BuildSI.js -->
       </div>
-      <div class="tableBeacons">
-        <p>Testing Beacons</p>
-        <p>Testing Beacons</p>
-        <p>Testing Beacons</p>
-        <p>Testing Beacons</p>
-        <p>Testing Beacons</p>
-        <p>Testing Beacons</p>
-        <p>Testing Beacons</p>
-        <p>Testing Beacons</p>
-        <p>Testing Beacons</p>
-        <p>Testing Beacons</p>
-        <p>Testing Beacons</p>
-        <p>Testing Beacons</p>
-        <p>Testing Beacons End</p>
+      <div class="tableBeacons wraper">
+        <div class="siItem">
+          <p>First Beacon</p>
+        </div>
+        <div class="siItem">
+          <p>Second Beacon</p>
+        </div>
+        <div class="siItem">
+          <p>Thrid Beacon</p>
+        </div>
+        <div class="siItem">
+          <p>Fourth Beacon</p>
+        </div>
+        <div class="siItem">
+          <p>Fifth Beacon</p>
+        </div>
+        <div class="siItem">
+          <p>Sixth Beacon</p>
+        </div>
+        <div class="siItem">
+          <p>nth Beacon</p>
+        </div>
+        <div class="siItem">
+          <p>nth Beacon</p>
+        </div>
+        <div class="siItem">
+          <p>nth Beacon</p>
+        </div>
+        <div class="siItem">
+          <p>nth Beacon</p>
+        </div>
+        <div class="siItem">
+          <p>nth Beacon</p>
+        </div>
+        <div class="siItem">
+          <p>nth Beacon</p>
+        </div>
+        <div class="siItem">
+          <p>nth Beacon</p>
+        </div>
+        <div class="siItem">
+          <p>Last Beacon</p>
+        </div>
       </div>
-      <div class="tableEvents">
-        <p>Testing Events</p>
-        <p>Testing Events</p>
-        <p>Testing Events</p>
-        <p>Testing Events</p>
-        <p>Testing Events</p>
-        <p>Testing Events</p>
-        <p>Testing Events</p>
-        <p>Testing Events</p>
-        <p>Testing Events</p>
-        <p>Testing Events</p>
-        <p>Testing Events End</p>
+      <div class="tableEvents wraper">
+        <div class="siItem">
+          <p>First Event</p>
+        </div>
+        <div class="siItem">
+          <p>Last Event</p>
+        </div>
       </div>
     </div>
 

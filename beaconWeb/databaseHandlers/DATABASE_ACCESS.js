@@ -17,7 +17,7 @@ function _RECEIVE_GAMESTORES(){
   // Using the "GET" php protocals
   // Script in "receiveINFO"
   // Run the script async meaning that the js must wait until this finishes
-  xmlhttp.open("GET", "databaseHandlers/RECEIVE_GAMESTORES.php", false);
+  xmlhttp.open("GET", "/GitHub/Beacon/beaconWeb/databaseHandlers/RECEIVE_GAMESTORES.php", false);
   xmlhttp.send();
 
   // Return the array of JSON objects from our database
@@ -31,7 +31,7 @@ function _RECEIVE_PLAYERS(){
          _markers = JSON.parse(this.responseText);
       }
   };
-  xmlhttp.open("GET", "databaseHandlers/RECEIVE_PLAYERS.php", false);
+  xmlhttp.open("GET", "/GitHub/Beacon/beaconWeb/databaseHandlers/RECEIVE_PLAYERS.php", false);
   xmlhttp.send();
   return _markers;
 }
@@ -43,7 +43,7 @@ function _RECEIVE_EVENTS(){
          _markers = JSON.parse(this.responseText);
       }
   };
-  xmlhttp.open("GET", "databaseHandlers/RECEIVE_EVENTS.php", false);
+  xmlhttp.open("GET", "/GitHub/Beacon/beaconWeb/databaseHandlers/RECEIVE_EVENTS.php", false);
   xmlhttp.send();
   return _markers;
 }
@@ -55,7 +55,7 @@ function _RECEIVE_BEACONS(){
          _markers = JSON.parse(this.responseText);
       }
   };
-  xmlhttp.open("GET", "databaseHandlers/RECEIVE_BEACONS.php", false);
+  xmlhttp.open("GET", "/GitHub/Beacon/beaconWeb/databaseHandlers/RECEIVE_BEACONS.php", false);
   xmlhttp.send();
   return _markers;
 }
