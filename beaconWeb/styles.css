@@ -4,7 +4,66 @@ html {
 }
 
 
+.description {
+  margin: 2px;
+}
 
+.beaconSummaryBox {
+  border: 1px solid black;
+  width: 99%;
+  margin: auto;
+}
+
+.tag {
+  min-width: 75px;
+  margin: auto;
+}
+
+.tagTab {
+  margin: auto;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.game {
+  margin: 0px;
+}
+
+.respondingPlayers {
+  display: none;
+}
+
+.box-container {
+    width:100%;
+    margin: auto;
+    height: 24px;
+}
+
+.icon-box {
+    width:33%;
+    display:inline;
+    float:left;
+    margin: auto;
+}
+
+.time {
+  display: inline;
+}
+
+.playername {
+  display: inline;
+}
+
+.beaconPlayerCount {
+  display: inline;
+}
+
+.beaconStorePageSI {
+  width: 95%;
+  margin: auto;
+  background-color: #666666;
+}
 
 .storeSIBreak {
   background-color: white;
@@ -90,9 +149,8 @@ html {
 }
 
 .siItem {
-    width: 80%;
+    width: 95%;
     min-height: 75px;
-    max-width: 332px;
     margin: auto;
     margin-top: 5px;
     text-align: center;

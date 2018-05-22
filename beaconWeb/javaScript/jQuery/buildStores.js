@@ -162,5 +162,127 @@ $( document ).ready(function() {
         /* Create Phone Number */
         $siStorePhone = $( "<p class='phone'>" + phoneNumberParser(gameStore[index].phone) + "</p>")
         $( "#exampleGameStoreCard" + GSID ).append($siStorePhone)
+
+        /*
+        <hr class="storeSIBreak">
+        <div class="BeaconSection">
+          <h4> Beacons </h4>
+            <hr class="storeSIBreak">
+            <div class="beaconStorePageSI">
+              <div class="box-container">
+                <div class="icon-box">
+                  <p class="playername">Mikian</p>
+                </div>
+                <div class="icon-box">
+                  <p class="beaconPlayerCount">1:2</p>
+                </div>
+                <div class="icon-box">
+                  <p class="time">3:59:59</p>
+                </div>
+              </div>
+              <p class="respondingPlayers">Mikian has responded</p>
+              <div class="beaconSummaryBox">
+                <p class="game">Magic!</p>
+                <div class="tagTab">
+                  <p class="tag"> Modern </p>
+                  <p class="tag"> Free </p>
+                  <p class="tag"> Fun </p>
+                  <p class="tag"> Beginner </p>
+                </div>
+              </div>
+              <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua </p>
+            </div>
+          */
+
+          /* Create phone Break */
+          $storeSIBreak = $( "<hr class='storeSIBreak'>")
+          $( "#exampleGameStoreCard" + GSID ).append($storeSIBreak)
+
+          /* Create beacon section */
+          $BeaconSection = $( "<div id='BeaconSection" + GSID + "' class='BeaconSection'>")
+          $( "#exampleGameStoreCard" + GSID ).append($BeaconSection)
+          //--
+
+              /* Create beacon header */
+              $Beacons = $( "<h4> Beacons </h4>")
+              $( "#BeaconSection" + GSID ).append($Beacons)
+
+              /* Create storeSIBreak */
+              $storeSIBreak = $( "<hr class='storeSIBreak'>")
+              $( "#BeaconSection" + GSID ).append($storeSIBreak)
+
+              /* // NOTE: After here the GSID should be changed to BEACONID */
+
+              /* Create beaconStorePageSI */
+              $beaconStorePageSI = $( "<div id='beaconStorePageSI" + GSID + "' class='beaconStorePageSI'>")
+              $( "#BeaconSection" + GSID ).append($beaconStorePageSI)
+              //--
+
+                  /* Create box-container */
+                  $boxcontainer = $( "<div id='box-container" + GSID + "' class='box-container'>")
+                  $( "#beaconStorePageSI" + GSID ).append($boxcontainer)
+                  //--
+
+                      /* Create icon-box */
+                      $iconbox = $( "<div id='icon-box" + 1 + "' class='icon-box'>")
+                      $( "#box-container" + GSID ).append($iconbox)
+                      //--
+
+                          /* Create playername */
+                          $playername = $( "<p class='playername'>Mikian</p>")
+                          $( "#icon-box" + 1 ).append($playername)
+
+                      /* Create icon-box */
+                      $iconbox = $( "<div id='icon-box" + 2 + "' class='icon-box'>")
+                      $( "#box-container" + GSID ).append($iconbox)
+                      //--
+
+                          /* Create beaconPlayerCount */
+                          $beaconPlayerCount = $( "<p class='beaconPlayerCount'>1:2</p>")
+                          $( "#icon-box" + 2 ).append($beaconPlayerCount)
+
+                      /* Create icon-box */
+                      $iconbox = $( "<div id='icon-box" + 3 + "' class='icon-box'>")
+                      $( "#box-container" + GSID ).append($iconbox)
+                      //--
+
+                          /* Create time */
+                          $time = $( "<p class='time'>3:59:59</p>")
+                          $( "#icon-box" + 3 ).append($time)
+
+                  /* Create beaconSummaryBox */
+                  $beaconSummaryBox = $( "<div id='beaconSummaryBox" + GSID + "' class='beaconSummaryBox'>")
+                  $( "#beaconStorePageSI" + GSID ).append($beaconSummaryBox)
+                  //--
+
+                      /* Create game */
+                      $game = $( "<p class='game'>Magic!</p>")
+                      $( "#beaconSummaryBox" + GSID ).append($game)
+
+                      /* Create tagTab */
+                      $tagTab = $( "<div id='tagTab" + GSID + "' class='tagTab'>")
+                      $( "#beaconSummaryBox" + GSID ).append($tagTab)
+                      //--
+
+                          /* Create tag */
+                          $tag = $( "<p class='tag'> Modern </p>")
+                          $( "#tagTab" + GSID ).append($tag)
+
+                          /* Create tag */
+                          $tag = $( "<p class='tag'> Free </p>")
+                          $( "#tagTab" + GSID ).append($tag)
+
+                          /* Create tag */
+                          $tag = $( "<p class='tag'> Fun </p>")
+                          $( "#tagTab" + GSID ).append($tag)
+
+                          /* Create tag */
+                          $tag = $( "<p class='tag'> Beginner </p>")
+                          $( "#tagTab" + GSID ).append($tag)
+
+                  /* Create description */
+                  $description = $( "<p class='description'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua </p>")
+                  $( "#beaconStorePageSI" + GSID ).append($description)
+
   }
 });
