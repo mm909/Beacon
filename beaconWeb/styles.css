@@ -4,7 +4,7 @@ html {
 }
 
 .beaconBox {
-  border: 2px blue solid;
+  border: 2px #66fcf1 solid;
   margin-top: 2px;
   margin-bottom: 2px;
 }

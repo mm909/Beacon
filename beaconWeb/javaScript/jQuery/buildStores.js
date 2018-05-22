@@ -216,9 +216,6 @@ $( document ).ready(function() {
               $( "#BeaconSection" + GSID ).append($beaconStorePageSI)
               //--
 
-              /* // NOTE: After here the GSID should be changed to BEACONID */
-              console.table(beacons)
-
               for(var i = 0; i < beacons.length; i++){
                 var BEACONID = beacons[i].BEACONID;
 
@@ -238,7 +235,7 @@ $( document ).ready(function() {
                     //--
 
                         /* Create playername */
-                        $playername = $( "<p class='playername'>Mikian</p>")
+                        $playername = $( "<p class='playername'>" + beacons[i].player1Name + "</p>")
                         $( "#icon-box1" + BEACONID ).append($playername)
 
                     /* Create icon-box */
@@ -247,7 +244,7 @@ $( document ).ready(function() {
                     //--
 
                         /* Create beaconPlayerCount */
-                        $beaconPlayerCount = $( "<p class='beaconPlayerCount'>1:2</p>")
+                        $beaconPlayerCount = $( "<p class='beaconPlayerCount'>" + beacons[i].currentPlayers + ":" + beacons[i].players + "</p>")
                         $( "#icon-box2" + BEACONID ).append($beaconPlayerCount)
 
                     /* Create icon-box */
@@ -256,8 +253,9 @@ $( document ).ready(function() {
                     //--
 
                         /* Create time */
-                        $time = $( "<p class='time'>3:59:59</p>")
+                        $time = $( "<p class='time'></p>")
                         $( "#icon-box3" + BEACONID ).append($time)
+                        getLeftOverTime(BEACONID);
 
                 /* Create beaconSummaryBox */
                 $beaconSummaryBox = $( "<div id='beaconSummaryBox" + BEACONID + "' class='beaconSummaryBox'>")
@@ -265,7 +263,7 @@ $( document ).ready(function() {
                 //--
 
                     /* Create game */
-                    $game = $( "<p class='game'>Magic!</p>")
+                    $game = $( "<p class='game'>" + beacons[i].game + "</p>")
                     $( "#beaconSummaryBox" + BEACONID ).append($game)
 
                     /* Create tagTab */
