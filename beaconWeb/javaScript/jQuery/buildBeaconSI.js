@@ -53,7 +53,6 @@ function buildBeaconSI() {
               /* Create time */
               $time = $( "<p class='time'></p>")
               $( "#icon-box3" + BEACONID ).append($time)
-              getLeftOverTime(BEACONID);
 
       /* Create beaconSummaryBox */
       $beaconSummaryBox = $( "<div id='beaconSummaryBox" + BEACONID + "' class='beaconSummaryBox'>")
