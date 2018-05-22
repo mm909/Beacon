@@ -91,6 +91,7 @@ function initMap(){
     });
   }
 
-  buildSI();
+  buildPlayerSI();
+  buildBeaconSI();
 
 }

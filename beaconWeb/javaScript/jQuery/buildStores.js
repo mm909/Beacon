@@ -155,7 +155,7 @@ $( document ).ready(function() {
                     $tagTab = $( "<div id='tagTab" + BEACONID + "' class='tagTab'>")
                     $( "#beaconSummaryBox" + BEACONID ).append($tagTab)
                     //--
-                        getTags(BEACONID);
+                        getTags(beacons[j]);
 
                 /* Create description */
                 $description = $( "<p class='description'>" + beacons[j].description + "</p>")
@@ -367,7 +367,7 @@ $( document ).ready(function() {
                     $tagTab = $( "<div id='tagTab" + BEACONID + "' class='tagTab'>")
                     $( "#beaconSummaryBox" + BEACONID ).append($tagTab)
                     //--
-                        getTags(BEACONID);
+                        getTags(beacons[i]);
 
                 /* Create description */
                 $description = $( "<p class='description'>" + beacons[i].description + "</p>")

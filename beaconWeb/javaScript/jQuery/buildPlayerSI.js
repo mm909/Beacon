@@ -1,4 +1,4 @@
-function buildSI(){
+function buildPlayerSI(){
 
   /* Google function to calc distance between two points */
   google.maps.LatLng.prototype.distanceFrom = function(latlng) {

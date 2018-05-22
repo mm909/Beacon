@@ -5,14 +5,15 @@ html {
 
 
 .respond {
-  margin-bottom: 5px; 
+  margin-bottom: 5px;
 }
-
 
 .beaconBox {
   border: 2px #66fcf1 solid;
   margin-top: 2px;
   margin-bottom: 2px;
+  background-color: #666666;
+
 }
 
 .description {
