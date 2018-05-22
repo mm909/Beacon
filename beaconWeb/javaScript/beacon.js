@@ -14,7 +14,6 @@ function getTags(beacon, flag) {
     $tag = $( "<p class='tag'>" + flags[i] + "</p>")
     $( "#tagTab" + BEACONID ).append($tag)
   }
-  console.table(flags)
 
   $(".tag").css({
     "min-width": "95px"

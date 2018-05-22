@@ -1,11 +1,11 @@
-function buildBeaconSI() {
+$( document ).ready(function() {
   for(var i = 0; i < gameStore.length; i++){
     GSID = gameStore[i].GSID
     console.log(GSID)
 
     /* Create the card */
     $siBeaconCard = $( "<div class='siItem' id='exampleGameBeaconCard" + GSID + "' ></div>" )
-    $( ".tableBeacons" ).append($siBeaconCard);
+    $( "#test" ).append($siBeaconCard);
     //--
         $gameStoreName = $( "<p>" + gameStore[i].gameStoreName + "</p>")
         $( "#exampleGameBeaconCard" + GSID ).append($gameStoreName)
@@ -87,4 +87,4 @@ function buildBeaconSI() {
     }
 
   }
-}
+});
