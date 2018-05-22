@@ -204,7 +204,7 @@ $( document ).ready(function() {
           //--
 
               /* Create beacon header */
-              $Beacons = $( "<h4> Beacons </h4>")
+              $Beacons = $( "<h4 id='beaconsHeader'> Beacons </h4>")
               $( "#BeaconSection" + GSID ).append($Beacons)
 
               /* Create storeSIBreak */
@@ -216,9 +216,13 @@ $( document ).ready(function() {
               $( "#BeaconSection" + GSID ).append($beaconStorePageSI)
               //--
 
+              var beaconCount = 0;
               for(var i = 0; i < beacons.length; i++){
                 var BEACONID = beacons[i].BEACONID;
 
+                if(beacons[i].GSID != GSID) continue;
+                beaconCount++;
+                
                 /* Create beaconBox */
                 $beaconBox = $( "<div id='beaconBox" + BEACONID + "' class='beaconBox'>")
                 $( "#beaconStorePageSI" + GSID ).append($beaconBox)
@@ -270,27 +274,22 @@ $( document ).ready(function() {
                     $tagTab = $( "<div id='tagTab" + BEACONID + "' class='tagTab'>")
                     $( "#beaconSummaryBox" + BEACONID ).append($tagTab)
                     //--
-
-                        /* Create tag */
-                        $tag = $( "<p class='tag'> Modern </p>")
-                        $( "#tagTab" + BEACONID ).append($tag)
-
-                        /* Create tag */
-                        $tag = $( "<p class='tag'> Free </p>")
-                        $( "#tagTab" + BEACONID ).append($tag)
-
-                        /* Create tag */
-                        $tag = $( "<p class='tag'> Fun </p>")
-                        $( "#tagTab" + BEACONID ).append($tag)
-
-                        /* Create tag */
-                        $tag = $( "<p class='tag'> Beginner </p>")
-                        $( "#tagTab" + BEACONID ).append($tag)
+                        getTags(BEACONID);
 
                 /* Create description */
-                $description = $( "<p class='description'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua </p>")
+                $description = $( "<p class='description'>" + beacons[i].description + "</p>")
                 $( "#beaconBox" + BEACONID ).append($description)
 
+                /* Create respond button */
+                $respond = $( "<button class='respond'>Respond</button>")
+                $( "#beaconBox" + BEACONID ).append($respond)
+
+              }
+
+              if(beaconCount == 0){
+                $( ".storeSIBreak").hide()
+                $( "#beaconsHeader").text("There are no Beacons at this location")
+                $( "#beaconsHeader").css("fontSize", 20)
               }
   }
 });

@@ -3,6 +3,12 @@ html {
   overflow: hidden;
 }
 
+
+.respond {
+  margin-bottom: 5px; 
+}
+
+
 .beaconBox {
   border: 2px #66fcf1 solid;
   margin-top: 2px;
@@ -11,6 +17,7 @@ html {
 
 .description {
   margin: 2px;
+  width: 95%;
 }
 
 .beaconSummaryBox {
