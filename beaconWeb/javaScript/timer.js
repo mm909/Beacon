@@ -40,12 +40,10 @@ function initTimes(){
       timeDifference[1] = 59 - timeDifference[1];
       timeDifference[2] = 59 - timeDifference[2];
       if(timeDifference[0] < 0) {
-         timeDifference[0] = 0;
-         timeDifference[1] = 0;
-         timeDifference[2] = 0;
+        $("#icon-box3" + beacons[i].BEACONID).html("EXPIRED")
+      } else {
+        $("#icon-box3" + beacons[i].BEACONID).html(timeDifference[0] + ":" + timeDifference[1] + ":" + timeDifference[2])
       }
-      console.log(timeDifference[0] + ":" + timeDifference[1] + ":" + timeDifference[2])
-      $("#icon-box3" + beacons[i].BEACONID).html(timeDifference[0] + ":" + timeDifference[1] + ":" + timeDifference[2])
   }
 }
 
