@@ -3,6 +3,11 @@ html {
   overflow: hidden;
 }
 
+.beaconBox {
+  border: 2px blue solid;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
 
 .description {
   margin: 2px;
