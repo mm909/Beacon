@@ -4,10 +4,6 @@ $( document ).ready(function() {
   var DIST = getParameterByName("DIST")
   var FLAG = getParameterByName("FLAG")
 
-  console.log(GSID)
-  console.log(DIST)
-  console.log(FLAG)
-
   updateCounts();
 
   if(FLAG == 1){
@@ -20,65 +16,162 @@ $( document ).ready(function() {
           address2   += " " + gameStore[i].zip;
       var navAddress  = "https://www.google.com/maps/dir/?api=1&destination=" + address1 + address2;
 
+      var GSID = gameStore[i].GSID;
+
       /* Create the card */
-      $siStoreCard = $( "<div class='siItem' id='exampleGameStoreCard" + i + "' ></div>" )
+      $siStoreCard = $( "<div class='siItem' id='exampleGameStoreCard" + GSID + "' ></div>" )
       $( ".pageContent" ).append($siStoreCard);
       //--
 
           /* Create the header part */
-          $siStoreHeader = $( "<div id='exampleGameStoreHeader" + i + "' class='si-Store-Header'></div>" )
-          $( "#exampleGameStoreCard" + i ).append($siStoreHeader)
+          $siStoreHeader = $( "<div id='exampleGameStoreHeader" + GSID + "' class='si-Store-Header'></div>" )
+          $( "#exampleGameStoreCard" + GSID ).append($siStoreHeader)
           //--
 
               /* Create Store Name */
               $siStoreName = $( "<a id='exampleGameStoreName" + i + "' class='storeName' href='#'>" + gameStore[i].gameStoreName + "</a>")
-              $( "#exampleGameStoreHeader" + i ).append($siStoreName)
+              $( "#exampleGameStoreHeader" + GSID ).append($siStoreName)
 
               /* Create Break */
               $siStoreBreak = $( "<hr>")
-              $( "#exampleGameStoreHeader" + i ).append($siStoreBreak)
+              $( "#exampleGameStoreHeader" + GSID ).append($siStoreBreak)
 
               /* Create Directions Link */
               $siStoreDirections = $( "<a class='directions' target='_blank' href='" + navAddress + "'>Directions</a>")
-              $( "#exampleGameStoreHeader" + i ).append($siStoreDirections)
+              $( "#exampleGameStoreHeader" + GSID ).append($siStoreDirections)
 
               /* Create Distance */
               $siStoreDistance = $( "<p class='distance'>" + gameStore[i].distance + " miles</p>")
-              $( "#exampleGameStoreHeader" + i ).append($siStoreDistance)
+              $( "#exampleGameStoreHeader" + GSID ).append($siStoreDistance)
 
           /* Create Header Break */
           $siStoreHaederBreak = $( "<hr class='headerBreak'>")
-          $( "#exampleGameStoreCard" + i ).append($siStoreHaederBreak)
+          $( "#exampleGameStoreCard" + GSID ).append($siStoreHaederBreak)
 
           /* Create the buttons part */
-          $siStoreButtons = $( "<div id='exampleGameStoreButtons" + i + "' class='siButtons'>" )
-          $( "#exampleGameStoreCard" + i ).append($siStoreButtons)
+          $siStoreButtons = $( "<div id='exampleGameStoreButtons" + GSID + "' class='siButtons'>" )
+          $( "#exampleGameStoreCard" + GSID ).append($siStoreButtons)
           //--
 
               /* Create the buttons container */
-              $siStoreButtonContainer = $( "<div id='exampleGameStoreButtonContainer" + i + "' class='btn-group btn-group-justified'>" )
-              $( "#exampleGameStoreButtons" + i ).append($siStoreButtonContainer)
+              $siStoreButtonContainer = $( "<div id='exampleGameStoreButtonContainer" + GSID + "' class='btn-group btn-group-justified'>" )
+              $( "#exampleGameStoreButtons" + GSID ).append($siStoreButtonContainer)
               //--
 
                   /* Create Button*/
                   $siStoreButton1 = $( "<a href='stores/storePage.html?GSID=" + gameStore[i].GSID + "&DIST=" + gameStore[i].distance + "' onclick='' class='btn btn-dark'>Players: " + gameStore[i].playersTotal + "</a>" )
-                  $( "#exampleGameStoreButtonContainer" + i ).append($siStoreButton1)
+                  $( "#exampleGameStoreButtonContainer" + GSID ).append($siStoreButton1)
 
                   /* Create Button*/
                   $siStoreButton2 = $( "<a href='stores/storePage.html?GSID=" + gameStore[i].GSID + "&DIST=" + gameStore[i].distance + "' onclick='' class='btn btn-dark'>Beacons: " + gameStore[i].beaconsTotal + "</a>" )
-                  $( "#exampleGameStoreButtonContainer" + i ).append($siStoreButton2)
+                  $( "#exampleGameStoreButtonContainer" + GSID ).append($siStoreButton2)
 
                   /* Create Button*/
                   $siStoreButton3 = $( "<a href='stores/storePage.html?GSID=" + gameStore[i].GSID + "&DIST=" + gameStore[i].distance + "' onclick='' class='btn btn-dark'>Events: " + gameStore[i].eventsTotal + "</a>" )
-                  $( "#exampleGameStoreButtonContainer" + i ).append($siStoreButton3)
+                  $( "#exampleGameStoreButtonContainer" + GSID ).append($siStoreButton3)
 
           /* Create Button Break */
           $siStoreButtonBreak = $( "<hr class='buttonBreak'>")
-          $( "#exampleGameStoreCard" + i ).append($siStoreButtonBreak)
+          $( "#exampleGameStoreCard" + GSID ).append($siStoreButtonBreak)
 
           /* Create Phone Number */
           $siStorePhone = $( "<p class='phone'>" + phoneNumberParser(gameStore[i].phone) + "</p>")
-          $( "#exampleGameStoreCard" + i ).append($siStorePhone)
+          $( "#exampleGameStoreCard" + GSID ).append($siStorePhone)
+
+          /* Create phone Break */
+          $storeSIBreak = $( "<hr class='storeSIBreak'>")
+          $( "#exampleGameStoreCard" + GSID ).append($storeSIBreak)
+
+          /* Create beacon section */
+          $BeaconSection = $( "<div id='BeaconSection" + GSID + "' class='BeaconSection'>")
+          $( "#exampleGameStoreCard" + GSID ).append($BeaconSection)
+          //--
+
+              /* Create beacon header */
+              $Beacons = $( "<h4 id='beaconsHeader" + GSID + "'> Beacons </h4>")
+              $( "#BeaconSection" + GSID ).append($Beacons)
+
+              /* Create beaconStorePageSI */
+              $beaconStorePageSI = $( "<div id='beaconStorePageSI" + GSID + "' class='beaconStorePageSI'>")
+              $( "#BeaconSection" + GSID ).append($beaconStorePageSI)
+              //--
+
+          var beaconCount = 0;
+
+          for(var j = 0; j < beacons.length; j++){
+            var BEACONID = beacons[j].BEACONID;
+
+            if(beacons[j].GSID != GSID) continue;
+            beaconCount++;
+
+            /* Create beaconBox */
+            $beaconBox = $( "<div id='beaconBox" + BEACONID + "' class='beaconBox'>")
+            $( "#exampleGameStoreCard" + GSID ).append($beaconBox)
+            //--
+
+                /* Create box-container */
+                $boxcontainer = $( "<div id='box-container" + BEACONID + "' class='box-container'>")
+                $( "#beaconBox" + BEACONID ).append($boxcontainer)
+                //--
+
+                    /* Create icon-box */
+                    $iconbox = $( "<div id='icon-box1" + BEACONID + "' class='icon-box'>")
+                    $( "#box-container" + BEACONID ).append($iconbox)
+                    //--
+
+                        /* Create playername */
+                        $playername = $( "<p class='playername'>" + beacons[j].player1Name + "</p>")
+                        $( "#icon-box1" + BEACONID ).append($playername)
+
+                    /* Create icon-box */
+                    $iconbox = $( "<div id='icon-box2" + BEACONID + "' class='icon-box'>")
+                    $( "#box-container" + BEACONID ).append($iconbox)
+                    //--
+
+                        /* Create beaconPlayerCount */
+                        $beaconPlayerCount = $( "<p class='beaconPlayerCount'>" + beacons[j].currentPlayers + ":" + beacons[j].players + "</p>")
+                        $( "#icon-box2" + BEACONID ).append($beaconPlayerCount)
+
+                    /* Create icon-box */
+                    $iconbox = $( "<div id='icon-box3" + BEACONID + "' class='icon-box'>")
+                    $( "#box-container" + BEACONID ).append($iconbox)
+                    //--
+
+                        /* Create time */
+                        $time = $( "<p class='time'></p>")
+                        $( "#icon-box3" + BEACONID ).append($time)
+                        getLeftOverTime(BEACONID);
+
+                /* Create beaconSummaryBox */
+                $beaconSummaryBox = $( "<div id='beaconSummaryBox" + BEACONID + "' class='beaconSummaryBox'>")
+                $( "#beaconBox" + BEACONID ).append($beaconSummaryBox)
+                //--
+
+                    /* Create game */
+                    $game = $( "<p class='game'>" + beacons[j].game + "</p>")
+                    $( "#beaconSummaryBox" + BEACONID ).append($game)
+
+                    /* Create tagTab */
+                    $tagTab = $( "<div id='tagTab" + BEACONID + "' class='tagTab'>")
+                    $( "#beaconSummaryBox" + BEACONID ).append($tagTab)
+                    //--
+                        getTags(BEACONID);
+
+                /* Create description */
+                $description = $( "<p class='description'>" + beacons[j].description + "</p>")
+                $( "#beaconBox" + BEACONID ).append($description)
+
+                /* Create respond button */
+                $respond = $( "<button class='respond'>Respond</button>")
+                $( "#beaconBox" + BEACONID ).append($respond)
+
+              }
+
+              if(beaconCount == 0){
+                $( "#storeSIBreak" + GSID).hide()
+                $( "#beaconsHeader" + GSID).text("There are no Beacons at this location")
+                $( "#beaconsHeader" + GSID).css("fontSize", 20)
+              }
     }
   } else {
 
@@ -222,7 +315,7 @@ $( document ).ready(function() {
 
                 if(beacons[i].GSID != GSID) continue;
                 beaconCount++;
-                
+
                 /* Create beaconBox */
                 $beaconBox = $( "<div id='beaconBox" + BEACONID + "' class='beaconBox'>")
                 $( "#beaconStorePageSI" + GSID ).append($beaconBox)
